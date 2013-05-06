@@ -2186,7 +2186,8 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-if(catSelection && !checkFlagItem) {
+alert("catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
+if(catSelection ) {
 	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
 	contentCheckedIndex++;
 }
@@ -2203,7 +2204,7 @@ checkFlagItem = true;
 //alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 //alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
-if(catSelection && !checkFlagItem) {
+if(catSelection ) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 		contentUnCheckedIndex++;
 }
