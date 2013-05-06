@@ -2187,7 +2187,7 @@ console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
 else {
-mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+//mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 contentUnCheckedIndex++;
 }
 alert("mainCheckedItems"+mainCheckedItems);
