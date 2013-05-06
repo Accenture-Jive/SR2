@@ -818,6 +818,15 @@ $("#cat_select_items_button").show();
 $("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
+for(var index=0; index < mainCheckedItems.length;index++) {
+			alert("checked items : "+mainCheckedItems[index]);
+			console.log("checked items : "+mainCheckedItems[index]);
+		}
+		
+		for(var index=0;index < mainUncheckItems.length;index++) {
+			alert("unchecked items : "+mainUncheckItems[index]);
+			console.log("unchecked items : "+mainUncheckItems[index]);
+		}
 getDiscussions(space_url);
 getIdeas(space_url);
 getPolls(space_url);
@@ -2194,7 +2203,7 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
-if(catSelection ) {
+if(catSelection) {
 	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
 	contentCheckedIndex++;
 	break;
@@ -2227,15 +2236,7 @@ files_row=files_row+'</table>';
 document.getElementById("files_div").innerHTML=files_row;	
 
 });
-for(var index=0; index < mainCheckedItems.length;index++) {
-			alert("checked items : "+mainCheckedItems[index]);
-			console.log("checked items : "+mainCheckedItems[index]);
-		}
-		
-		for(var index=0;index < mainUncheckItems.length;index++) {
-			alert("unchecked items : "+mainUncheckItems[index]);
-			console.log("unchecked items : "+mainUncheckItems[index]);
-		}
+
 }
 
 function getBlogs(blog_url)
