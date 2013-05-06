@@ -2018,9 +2018,9 @@ var uncheckedItemArrayUpdated = new Array();
 
  
 
-$(function(){
+function filterCheckedUncheckCatgUrl(){
 	
-      $('#save_value').click(function(){
+     
 	  
 	  alert("hi");
 	  var checkedIndex = 0;
@@ -2097,12 +2097,12 @@ $(function(){
 		}
 		
 		
-      });
+
 		
-		
+		}
 
 	  
-    });
+
 	
 	
 
@@ -3014,6 +3014,10 @@ if(catSelection){
 		for(var index=0;index < mainUncheckItems.length;index++) {
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
+		//***********************************
+		filterCheckedUncheckCatgUrl();
+		
+		
 
 }
 else {
