@@ -2191,7 +2191,7 @@ else
 {
 console.log("uncategg1= "+categg1);
 console.log("unselected_cat= "+selected_cat);
-console.log(document.getElementById("file_cb"+index).value);
+//console.log(document.getElementById("file_cb"+index).value);
 //mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 //contentUnCheckedIndex++;
 }
