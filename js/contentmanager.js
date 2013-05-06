@@ -2315,7 +2315,7 @@ addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 if(catSelection) {
-	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("blog_cb"+index).value;
 	contentCheckedIndex++;
 	checkFlagItem = true;
 	break;
@@ -2325,7 +2325,7 @@ if(catSelection) {
 
 if(catSelection && !checkFlagItem) {
 	alert("Blogs ---catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
-		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("blog_cb"+index).value;
 		contentUnCheckedIndex++;
 }
 
