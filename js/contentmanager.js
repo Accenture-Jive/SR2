@@ -1,3 +1,6 @@
+var contentCheckedIndex =0;
+var contentUnCheckedIndex =0;
+
 var addId=new Array();
 var arrayIndex=0;
 var browserName='';
@@ -1988,8 +1991,7 @@ osapi.jive.corev3.places.requestPicker(params);
 }
 
 //*****************Code for Managing catagories*******************
-var contentCheckedIndex =0;
-	var contentUnCheckedIndex =0;
+
 var mainCheckedItems = new Array();
 var mainUncheckItems = new Array();
 
