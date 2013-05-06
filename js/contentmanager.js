@@ -2187,17 +2187,18 @@ console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 alert("catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
-if(catSelection ) {
-	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
-	contentCheckedIndex++;
-}
+
 
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
-checkFlagItem = true;
+if(catSelection ) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+	contentCheckedIndex++;
+	break;
+}
 }
 
 
