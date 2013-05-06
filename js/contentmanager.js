@@ -2324,7 +2324,6 @@ if(catSelection) {
 }
 
 if(catSelection && !checkFlagItem) {
-	alert("Blogs ---catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("blog_cb"+index).value;
 		contentUnCheckedIndex++;
 }
@@ -2409,6 +2408,7 @@ docs_row = docs_row + '<tr>'+
 '</tr>';
 
 var categg3=postDoc.category;
+var checkFlagItem = false;
 
 for(var ind=0;ind<categg3.length;ind++)
 {
@@ -2422,7 +2422,17 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+if(catSelection) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("doc_cb"+index).value;
+	contentCheckedIndex++;
+	checkFlagItem = true;
+	break;
 }
+}
+}
+if(catSelection && !checkFlagItem) {
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("doc_cb"+index).value;
+		contentUnCheckedIndex++;
 }
 }
 else
