@@ -1990,7 +1990,7 @@ osapi.jive.corev3.places.requestPicker(params);
 function getFiles(space_url)
 {
 // fetches the files from the selected space/group/project using the SPACE_URL.
-
+alert("Into get files...");
 osapi.jive.corev3.contents.get({
 type : 'file',
 fields : '@all',
