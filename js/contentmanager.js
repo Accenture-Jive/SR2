@@ -3017,14 +3017,14 @@ if(catSelection){
 		}
 		//***********************************
 		filterCheckedUncheckCatgUrl();
-		for(var index=0; index < checkItemArrayUpdated.length;index++) {
+		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
 			console.log("new checked items : "+checkItemArrayUpdated[index]);
 		}
 		for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
 			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
-		}
+		}*/
 		
 		
 
