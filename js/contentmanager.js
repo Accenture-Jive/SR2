@@ -2171,36 +2171,35 @@ files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.category+'</td>'+
 '</tr>';
-
+var checkFlagItem = false;
 for(var ind=0;ind<categg1.length;ind++)
 {
+
 if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
-contentCheckedIndex++;
+if(!checkFlagItem) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+	contentCheckedIndex++;
+}
+
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+checkFlagItem = true;
 }
-else
-{
-console.log("uncategg1= "+categg1);
-console.log("unselected_cat= "+selected_cat);
-console.log(document.getElementById("file_cb"+index).value);
-if(document.getElementById("file_cb"+index).value != null){
-mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
-contentUnCheckedIndex++;
-}
-}
-alert(mainCheckedItems.length);
-alert(mainUncheckItems.length);
+
+
 //alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 //alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
+}
+if(!checkFlagItem) {
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+		contentUnCheckedIndex++;
 }
 }
 else
