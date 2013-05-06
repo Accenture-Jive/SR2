@@ -2958,6 +2958,10 @@ var all_selected='';
 
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
+if(catSelection){
+	alert("catagory selectionn....");
+}
+else {
 
 all_selected='';
 Grp_file_json='';
@@ -3128,7 +3132,7 @@ all_selected='<table name="all_selected_items" id="all_selected_items" border="0
 document.getElementById("start_copying_button").disabled = true;
 document.getElementById("selected_items").innerHTML=all_selected;
 }
-
+}
 };
 
 function startCopying(){
