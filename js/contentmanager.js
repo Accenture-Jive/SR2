@@ -280,6 +280,7 @@ $('#start_copying_button').val('Start Deleting');
 $('#start_copying_button').unbind('click').click(function(){startDeleting();});
 }
 else if(sel_action_val=="uploadd"){
+alert("hjk");
 if(browserName=="MSIE")
 {
 
@@ -2015,7 +2016,7 @@ else
 // action when the selected space/group/project has files.
 if (sel_action_val=='categs')
 {
-var header='Categoryssdff';
+var header='Category';
 }
 else
 {
@@ -2040,7 +2041,6 @@ updated : "",
 fileUrl : "",
 category: ""
 }
-
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
@@ -2052,7 +2052,7 @@ postFiles.category = group.categories;
 if (sel_action_val=='categs')
 {
 var categg1=postFiles.category;
-alert("categg1 = "+"categg1);
+
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
@@ -2061,7 +2061,6 @@ files_row = files_row + '<tr>'+
 
 for(var ind=0;ind<categg1.length;ind++)
 {
-alert("Hiiiisdsi");
 if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
