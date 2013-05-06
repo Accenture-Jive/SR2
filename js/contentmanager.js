@@ -280,7 +280,6 @@ $('#start_copying_button').val('Start Deleting');
 $('#start_copying_button').unbind('click').click(function(){startDeleting();});
 }
 else if(sel_action_val=="uploadd"){
-alert("hjk");
 if(browserName=="MSIE")
 {
 
@@ -2047,7 +2046,7 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-
+alert("sdfsdf");
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
