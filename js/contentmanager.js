@@ -2513,7 +2513,7 @@ disc_row = disc_row + '<tr>'+
 '</tr>';
 
 var categg4=postDisc.category;
-
+var checkFlagItem = false;
 for(var ind=0;ind<categg4.length;ind++)
 {
 if (categg4[ind]==selected_cat)
@@ -2526,7 +2526,17 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+if(catSelection) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("doc_cb"+index).value;
+	contentCheckedIndex++;
+	checkFlagItem = true;
+	break;
 }
+}
+}
+if(catSelection && !checkFlagItem) {
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("doc_cb"+index).value;
+		contentUnCheckedIndex++;
 }
 }
 else
