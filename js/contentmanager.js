@@ -2040,6 +2040,7 @@ updated : "",
 fileUrl : "",
 category: ""
 }
+alert("Hiiiii");
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
