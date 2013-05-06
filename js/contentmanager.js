@@ -2197,6 +2197,8 @@ mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+inde
 contentUnCheckedIndex++;
 }
 }
+alert(mainCheckedItems.length);
+alert(mainUncheckItems.length);
 //alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 //alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
