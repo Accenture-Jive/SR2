@@ -2160,8 +2160,10 @@ postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
 // adding each file in a row as per the received response.
+alert("sdzdf");
 if (sel_action_val=='categs')
 {
+
 var categg1=postFiles.category;
 
 files_row = files_row + '<tr>'+
@@ -2185,8 +2187,11 @@ addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
-else {
-//mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+else if(categg1[ind]!=selected_cat){
+console.log("uncategg1= "+categg1);
+console.log("unselected_cat= "+selected_cat);
+console.log(document.getElementById("file_cb"+index).value);
+mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 contentUnCheckedIndex++;
 }
 alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
