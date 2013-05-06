@@ -2191,12 +2191,14 @@ else
 {
 console.log("uncategg1= "+categg1);
 console.log("unselected_cat= "+selected_cat);
-//console.log(document.getElementById("file_cb"+index).value);
-//mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
-//contentUnCheckedIndex++;
+console.log(document.getElementById("file_cb"+index).value);
+if(document.getElementById("file_cb"+index).value != null){
+mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+contentUnCheckedIndex++;
 }
-alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
-alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
+}
+//alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
+//alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
 }
 else
