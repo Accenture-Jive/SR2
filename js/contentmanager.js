@@ -1987,6 +1987,116 @@ $('#to_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 osapi.jive.corev3.places.requestPicker(params);
 }
 
+//*****************Code for Managing catagories*******************
+var mainCheckedItems = new Array();
+var mainUncheckItems = new Array();
+
+/*mainUncheckItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43423";
+mainUncheckItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43425";
+mainUncheckItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43426";
+mainUncheckItems[3] = "https://accenture.jiveon.com/api/core/v3/contents/43427";
+mainCheckedItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43421";
+mainCheckedItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43420";
+mainCheckedItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43424";*/
+
+var  checkedItemsArray = new Array();
+var uncheckItemArray = new Array();
+
+var checkItemArrayUpdated = new Array();
+var uncheckedItemArrayUpdated = new Array();
+
+ 
+
+$(function(){
+	var contentCheckedIndex =0;
+	var contentUnCheckedIndex =0;
+      $('#save_value').click(function(){
+	  
+	  alert("hi");
+	  var checkedIndex = 0;
+	  var uncheckedIndex = 0;
+        var val = [];
+        $(':checkbox').each(function(i){
+			
+		 val[i] = $(this).val();
+		 alert(val[i]);
+		 if($(this).is(':checked')){
+		 alert("true");
+			checkedItemsArray[checkedIndex] = $(this).val();
+			checkedIndex++;
+		 }
+		 else {
+				 alert("false");
+			uncheckItemArray[uncheckedIndex] = $(this).val();
+			uncheckedIndex++;
+		}
+		
+	
+	    });
+			/*Print the checked and the unchecked*/
+		/*for(var index=0; index < checkedItemsArray.length;index++) {
+			alert("checked items : "+checkedItemsArray[index]);
+		}
+		
+		for(var index=0;index < uncheckItemArray.length;index++) {
+			alert("unchecked items : "+uncheckItemArray[index]);
+		}*/
+		
+		/*Filter the the list */
+		var checkedIndex = 0;
+		var uncheckedIndex = 0;
+		for(var outerIndex=0;outerIndex < checkedItemsArray.length;outerIndex++) {
+			for(var innerIndex=0;innerIndex< mainCheckedItems.length;innerIndex++) {
+				//alert("checkedItemsArray[outerIndex] = mainCheckedItems[innerIndex] :" +checkedItemsArray[outerIndex] == mainCheckedItems[innerIndex]);
+				//alert("checkedItemsArray[outerIndex] = mainCheckedItems[innerIndex] :" +checkedItemsArray[outerIndex] == mainCheckedItems[innerIndex]);
+				if(checkedItemsArray[outerIndex] == mainCheckedItems[innerIndex]) {
+					break;
+				}
+				else {
+					if(innerIndex == (mainCheckedItems.length - 1)) {
+					checkItemArrayUpdated[checkedIndex] = checkedItemsArray[outerIndex];
+					checkedIndex++;
+					}
+					
+				}
+			}
+		}
+		
+		for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+		}
+		
+		for(var outerIndex=0;outerIndex < uncheckItemArray.length;outerIndex++) {
+			for(var innerIndex=0;innerIndex< mainUncheckItems.length;innerIndex++) {
+				//alert("checkedItemsArray[outerIndex] = mainCheckedItems[innerIndex] :" +checkedItemsArray[outerIndex] == mainCheckedItems[innerIndex]);
+				if(uncheckItemArray[outerIndex] == mainUncheckItems[innerIndex]) {
+					break;
+				}
+				else {
+					if(innerIndex == (mainUncheckItems.length - 1)) {
+					uncheckedItemArrayUpdated[uncheckedIndex] = uncheckItemArray[outerIndex];
+					uncheckedIndex++;
+					}
+					
+				}
+			}
+		}
+		
+		for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+		}
+		
+		
+      });
+		
+		
+
+	  
+    });
+	
+	
+
+//**********************End of the code*******************
 function getFiles(space_url)
 {
 // fetches the files from the selected space/group/project using the SPACE_URL.
@@ -2065,12 +2175,20 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
+mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+contentCheckedIndex++;
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
+else {
+mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+contentUnCheckedIndex++;
+}
+alert("mainCheckedItems"+mainCheckedItems);
+alert("mainUncheckItems"+mainUncheckItems);
 }
 }
 else
