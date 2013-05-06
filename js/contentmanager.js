@@ -818,8 +818,6 @@ $("#cat_select_items_button").show();
 $("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
-alert("mainCheckedItems = "+mainCheckedItems.length);
-alert("mainUncheckItems = "+mainUncheckItems.length);
 for(var index=0; index < mainCheckedItems.length;index++) {
 			alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
