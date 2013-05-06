@@ -2227,8 +2227,9 @@ files_row=files_row+'</table>';
 
 // writing the files table to the files tab.
 document.getElementById("files_div").innerHTML=files_row;	
-
+alert("The end");
 });
+
 
 }
 
