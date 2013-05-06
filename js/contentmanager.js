@@ -2047,7 +2047,7 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-alert("Hiiiii");
+alert("Hiiiisdsi");
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
