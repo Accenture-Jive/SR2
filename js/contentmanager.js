@@ -2159,7 +2159,6 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-alert("sdfsdf");
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
@@ -2190,8 +2189,8 @@ else {
 //mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 contentUnCheckedIndex++;
 }
-alert("mainCheckedItems"+mainCheckedItems);
-alert("mainUncheckItems"+mainUncheckItems);
+alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
+alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
 }
 else
