@@ -1988,6 +1988,8 @@ osapi.jive.corev3.places.requestPicker(params);
 }
 
 //*****************Code for Managing catagories*******************
+var contentCheckedIndex =0;
+	var contentUnCheckedIndex =0;
 var mainCheckedItems = new Array();
 var mainUncheckItems = new Array();
 
@@ -2008,8 +2010,7 @@ var uncheckedItemArrayUpdated = new Array();
  
 
 $(function(){
-	var contentCheckedIndex =0;
-	var contentUnCheckedIndex =0;
+	
       $('#save_value').click(function(){
 	  
 	  alert("hi");
