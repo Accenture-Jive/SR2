@@ -3012,10 +3012,19 @@ if(catSelection){
 		}
 		
 		for(var index=0;index < mainUncheckItems.length;index++) {
+		alert("unchecked items : "+mainUncheckItems[index]);
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		//***********************************
 		filterCheckedUncheckCatgUrl();
+		for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+			console.log("new checked items : "+checkItemArrayUpdated[index]);
+		}
+		for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+		}
 		
 		
 
