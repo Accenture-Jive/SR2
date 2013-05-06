@@ -2617,7 +2617,7 @@ idea_row = idea_row + '<tr>'+
 '</tr>';
 
 var categg5=postIdea.category;
-
+var checkFlagItem = false;
 for(var ind=0;ind<categg5.length;ind++)
 {
 if (categg5[ind]==selected_cat)
@@ -2630,7 +2630,17 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+if(catSelection) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("idea_cb"+index).value;
+	contentCheckedIndex++;
+	checkFlagItem = true;
+	break;
 }
+}
+}
+if(catSelection && !checkFlagItem) {
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("idea_cb"+index).value;
+		contentUnCheckedIndex++;
 }
 }
 else
