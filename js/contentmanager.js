@@ -2030,6 +2030,7 @@ function filterCheckedUncheckCatgUrl(){
 			
 		 val[i] = $(this).val();
 		 alert(val[i]);
+		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
@@ -2039,6 +2040,7 @@ function filterCheckedUncheckCatgUrl(){
 				 alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
+		}
 		}
 		
 	
