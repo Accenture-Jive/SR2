@@ -2197,11 +2197,11 @@ mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+inde
 contentUnCheckedIndex++;
 }
 }
-if(mainCheckedItems != null){
+if(mainCheckedItems != null && mainCheckedItems.length > 0){
 alert("mainCheckedItems length = "+mainCheckedItems.length);
 alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 }
-if(mainUncheckItems != null){
+if(mainUncheckItems != null && mainUncheckItems.length > 0){
 alert("mainUncheckItems length = "+mainUncheckItems.length);
 alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
