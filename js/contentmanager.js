@@ -1,9 +1,10 @@
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
+var catSelection = false;
 
 var addId=new Array();
 var arrayIndex=0;
-var browserName='';
+var browserName='';categSel
 var loggedUser='';
 var loggedUserName='';
 
@@ -797,6 +798,11 @@ $('select option[value="val1"]').attr("selected",true);
 
 function categSel()
 {
+var contentCheckedIndex =0;
+var contentUnCheckedIndex =0;
+var mainCheckedItems = new Array();
+var mainUncheckItems = new Array();
+catSelection = true;
 arrayIndex=0;
 //put the selected category to further use
 selected_cat=document.getElementById('cat_sel').value;
@@ -2165,7 +2171,7 @@ if (sel_action_val=='categs')
 {
 
 var categg1=postFiles.category;
-
+categSel
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
@@ -2180,7 +2186,7 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-if(!checkFlagItem) {
+if(catSelection && !checkFlagItem) {
 	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
 	contentCheckedIndex++;
 }
@@ -2197,7 +2203,7 @@ checkFlagItem = true;
 //alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 //alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
-if(!checkFlagItem) {
+if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
 		contentUnCheckedIndex++;
 }
