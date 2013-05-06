@@ -2225,6 +2225,13 @@ files_row=files_row+'</table>';
 document.getElementById("files_div").innerHTML=files_row;	
 
 });
+for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+	}
+for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+		}
+
 };
 
 function getBlogs(blog_url)
