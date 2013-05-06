@@ -2227,6 +2227,9 @@ files_row=files_row+'</table>';
 
 // writing the files table to the files tab.
 document.getElementById("files_div").innerHTML=files_row;	
+
+});
+
 for(var index=0; index < mainCheckedItems.length;index++) {
 			alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
@@ -2235,8 +2238,6 @@ for(var index=0; index < mainCheckedItems.length;index++) {
 		for(var index=0;index < mainUncheckItems.length;index++) {
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
-});
-
 
 }
 
