@@ -2015,7 +2015,7 @@ else
 // action when the selected space/group/project has files.
 if (sel_action_val=='categs')
 {
-var header='Category';
+var header='Categoryssdff';
 }
 else
 {
