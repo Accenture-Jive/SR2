@@ -2187,12 +2187,13 @@ addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
-else if(categg1[ind]!=selected_cat){
+else
+{
 console.log("uncategg1= "+categg1);
 console.log("unselected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
-contentUnCheckedIndex++;
+//mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+//contentUnCheckedIndex++;
 }
 alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
