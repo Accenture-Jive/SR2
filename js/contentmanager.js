@@ -2225,12 +2225,15 @@ files_row=files_row+'</table>';
 document.getElementById("files_div").innerHTML=files_row;	
 
 });
-for(var index=0; index < checkedItemsArray.length;index++) {
-			alert("checked items : "+checkedItemsArray[index]);
+
+for(var index=0; index < mainCheckedItems.length;index++) {
+			alert("checked items : "+mainCheckedItems[index]);
+			console.log("checked items : "+mainCheckedItems[index]);
 		}
 		
-		for(var index=0;index < uncheckItemArray.length;index++) {
-			alert("unchecked items : "+uncheckItemArray[index]);
+		for(var index=0;index < mainUncheckItems.length;index++) {
+			alert("unchecked items : "+mainUncheckItems[index]);
+			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 
 };
