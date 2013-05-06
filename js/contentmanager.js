@@ -2527,7 +2527,7 @@ addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 if(catSelection) {
-	mainCheckedItems[contentCheckedIndex] = document.getElementById("doc_cb"+index).value;
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("disc_cb"+index).value;
 	contentCheckedIndex++;
 	checkFlagItem = true;
 	break;
@@ -2535,7 +2535,7 @@ if(catSelection) {
 }
 }
 if(catSelection && !checkFlagItem) {
-		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("doc_cb"+index).value;
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("disc_cb"+index).value;
 		contentUnCheckedIndex++;
 }
 }
