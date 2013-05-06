@@ -2230,14 +2230,6 @@ document.getElementById("files_div").innerHTML=files_row;
 
 });
 
-for(var index=0; index < mainCheckedItems.length;index++) {
-			alert("checked items : "+mainCheckedItems[index]);
-			console.log("checked items : "+mainCheckedItems[index]);
-		}
-		
-		for(var index=0;index < mainUncheckItems.length;index++) {
-			console.log("unchecked items : "+mainUncheckItems[index]);
-		}
 
 }
 
@@ -2960,6 +2952,15 @@ function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(catSelection){
 	alert("catagory selectionn....");
+	for(var index=0; index < mainCheckedItems.length;index++) {
+			alert("checked items : "+mainCheckedItems[index]);
+			console.log("checked items : "+mainCheckedItems[index]);
+		}
+		
+		for(var index=0;index < mainUncheckItems.length;index++) {
+			console.log("unchecked items : "+mainUncheckItems[index]);
+		}
+
 }
 else {
 
