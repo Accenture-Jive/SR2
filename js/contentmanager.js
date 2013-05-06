@@ -2047,7 +2047,7 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-
+alert("Hiiiii");
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
@@ -2061,7 +2061,7 @@ files_row = files_row + '<tr>'+
 
 for(var ind=0;ind<categg1.length;ind++)
 {
-alert("Hiiiii");
+
 if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
