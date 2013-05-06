@@ -2299,6 +2299,7 @@ blog_row = blog_row + '<tr>'+
 '</tr>';	
 
 var categg2=postBlogs.category;
+var checkFlagItem = false;
 
 for(var ind=0;ind<categg2.length;ind++)
 {
@@ -2312,7 +2313,18 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+if(catSelection) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+	contentCheckedIndex++;
+	checkFlagItem = true;
+	break;
 }
+}
+}
+
+if(catSelection && !checkFlagItem) {
+		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
+		contentUnCheckedIndex++;
 }
 
 }
