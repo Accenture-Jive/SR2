@@ -2040,7 +2040,7 @@ updated : "",
 fileUrl : "",
 category: ""
 }
-alert("Hiiiii");
+
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
@@ -2061,6 +2061,7 @@ files_row = files_row + '<tr>'+
 
 for(var ind=0;ind<categg1.length;ind++)
 {
+alert("Hiiiii");
 if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
