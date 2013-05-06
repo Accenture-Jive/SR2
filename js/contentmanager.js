@@ -2201,7 +2201,7 @@ if(mainCheckedItems != null){
 alert("mainCheckedItems length = "+mainCheckedItems.length);
 alert("mainCheckedItems"+mainCheckedItems[contentCheckedIndex -1]);
 }
-if(mainUncheckItems != null)
+if(mainUncheckItems != null){
 alert("mainUncheckItems length = "+mainUncheckItems.length);
 alert("mainUncheckItems"+mainUncheckItems[contentUnCheckedIndex-1]);
 }
