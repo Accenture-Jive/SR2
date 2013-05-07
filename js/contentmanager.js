@@ -2140,6 +2140,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 					alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
 				toUpdateCategories = toUpdateCategories+','+selected_cat;
+				toUpdateCategories = ["cat1","cat2","cat3"];
 				//toUpdateCategories = selected_cat;
 				alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
