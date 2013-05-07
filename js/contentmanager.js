@@ -2143,11 +2143,11 @@ if(catIndex < checkItemArrayUpdated.length) {
 				//toUpdateCategories = contentCatResponseObj.categories;
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
-				toCategoriesArray = toUpdateCategories.split(",");
+				//toCategoriesArray = toUpdateCategories.split(",");
 				var tempIndex =0;
-				for(var index=0;index < toCategoriesArray.length;index++,tempIndex++) {
-						alert("---cc-"+toCategoriesArray[index]);
-						updatedCategoryList[tempIndex]=toCategoriesArray[index];
+				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
+						alert("---cc-"+toUpdateCategories[index]);
+						updatedCategoryList[tempIndex]=toUpdateCategories[index];
 				}
 					updatedCategoryList[tempIndex]=selected_cat;
 				//toUpdateCategories = selected_cat;
