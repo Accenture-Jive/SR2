@@ -2210,19 +2210,19 @@ removeCategoriesForContents();
 }
 
 function updateCategoriesForNewContents1() {
-	/*alert("Into the updateCategories for new contents");
+	alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
-	for(var index=0; index < checkItemArrayUpdated.length;index++) {
-			alert("new checked items : "+checkItemArrayUpdated[index]);
-			console.log("new checked items : "+checkItemArrayUpdated[index]);
+	for(var index=0; index < checkedItemsArray.length;index++) {
+			alert("new checked items : "+checkedItemsArray[index]);
+			console.log("new checked items : "+checkedItemsArray[index]);
 		}
 	for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
 			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}
 
-		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
-	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
+		alert("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex ="+catIndex);
+	console.log("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex="+catIndex);
 		
 if(catIndex < checkedItemsArray.length) {
 
