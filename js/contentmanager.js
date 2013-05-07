@@ -2129,9 +2129,9 @@ if(catIndex < checkItemArrayUpdated.length) {
 	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
-	type: "document",
+	type: 'document',
 	fields: '@all',	
-	uri: "https://acn.jiveon.com/api/core/v3/contents/23352"
+	uri: 'https://acn.jiveon.com/api/core/v3/contents/23352'
 	}).execute(function(contentCatResponseObj){
 				JSON.stringify(contentCatResponseObj);
 				//updateCategoriesForNewContents();
