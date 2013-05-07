@@ -1,6 +1,7 @@
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
+var catIndex = 0;
 
 var addId=new Array();
 var arrayIndex=0;
@@ -2106,7 +2107,29 @@ function filterCheckedUncheckCatgUrl(){
 		}
 
 	  
+function updateCategoriesForNewContents() {
 
+checkItemArrayUpdated;
+if(catIndex < checkItemArrayUpdated.length) {
+
+	var contentURL = checkItemArrayUpdated[catIndex];
+	
+	osapi.jive.corev3.contents.get({
+	type : contentType,
+	fields: '@all',
+	uri: contentURL
+	}).execute(function(contentCatResponse){
+					alert(JSON.stringify(contentCatResponse);
+					//updateCategoriesForNewContents();
+			});
+
+}
+
+
+
+
+
+}
 	
 	
 
@@ -3029,6 +3052,8 @@ if(catSelection){
 			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
+		catIndex = 0;
+		updateCategoriesForNewContents();
 		
 		
 
