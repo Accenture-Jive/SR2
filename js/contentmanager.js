@@ -2479,7 +2479,7 @@ document.getElementById("files_div").innerHTML=files_row;
 function getBlogs(blog_url)
 {
 // getting the blogs from the selected space/group/project using the BLOG_URL.
-alert("get blogs");
+//alert("get blogs");
 osapi.jive.corev3.contents.get({
 type : 'post',
 fields : '@all',
