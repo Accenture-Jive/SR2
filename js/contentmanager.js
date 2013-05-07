@@ -3259,7 +3259,7 @@ $("#start_copying_button").hide();
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		//***********************************
-		filterCheckedUncheckCatgUrl1();
+		//filterCheckedUncheckCatgUrl1();
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
 			console.log("new checked items : "+checkItemArrayUpdated[index]);
@@ -3270,7 +3270,7 @@ $("#start_copying_button").hide();
 		}*/
 		catIndex = 0;
 		//updateCategoriesForNewContents();
-		removeCategoriesForContents();
+		//removeCategoriesForContents();
 		
 		
 
