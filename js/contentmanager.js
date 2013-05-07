@@ -2337,6 +2337,9 @@ if(catIndex < uncheckItemArray.length) {
 			});
 
 }
+else {
+	alert("Category "+selected_cat+" updated");
+}
 
 
 }
@@ -3274,7 +3277,7 @@ $("#start_copying_button").hide();
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
 		catIndex = 0;
-		updateCategoriesForNewContents1();
+		//updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 		
 		
