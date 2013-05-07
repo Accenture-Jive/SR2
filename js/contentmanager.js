@@ -2146,7 +2146,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 				toCategoriesArray = toUpdateCategories.split(",");
 				
 				for(var index=0;index < toCategoriesArray.length;index++) {
-					alert("---cc-"toCategoriesArray[index]);
+					alert("---cc-"+toCategoriesArray[index]);
 				}
 				
 				//toUpdateCategories = selected_cat;
