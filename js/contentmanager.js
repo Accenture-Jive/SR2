@@ -2253,9 +2253,10 @@ if(catIndex < checkedItemsArray.length) {
 						if(toUpdateCategories[index] == selected_cat) {
 						isCategoryExisting = true;
 						}
-						alert("isCategoryExisting = "+isCategoryExisting);
+						
 						
 				}
+				alert("isCategoryExisting = "+isCategoryExisting);
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
 						isCategoryExisting = false;
@@ -2264,13 +2265,12 @@ if(catIndex < checkedItemsArray.length) {
 				for(var index=0;index < updatedCategoryList.length;index++,tempIndex++) {
 					console.log("VVVV-- "+updatedCategoryList[index]);
 				}
-				//toUpdateCategories = selected_cat;
-				//alert("toUpdateCategories = "+toUpdateCategories);
+				
 				console.log("toUpdateCategories = "+toUpdateCategories);
-				//contentCatResponseObj.categories = toUpdateCategories;
+				
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
-				//alert(JSON.stringify(catUpdateResponse));
+				
 				console.log(JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
