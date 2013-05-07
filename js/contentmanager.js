@@ -2134,6 +2134,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
 				alert(JSON.stringify(contentCatResponseObj));
+				console.log(JSON.stringify(contentCatResponseObj));
 				
 					alert(contentCatResponseObj.categories);
 					alert("selected_cat = "+selected_cat);
