@@ -2136,8 +2136,8 @@ function filterCheckedUncheckCatgUrl(){
 	    });
 		
 		
-		//updateCategoriesForNewContents1();
-		removeCategoriesForContents();
+		updateCategoriesForNewContents1();
+		//removeCategoriesForContents();
 
 		
 		}
