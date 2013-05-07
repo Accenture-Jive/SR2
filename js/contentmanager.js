@@ -2147,6 +2147,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
 						alert("---cc-"+toUpdateCategories[index]);
+						console.log("---cc-"+toUpdateCategories[index]);
 						updatedCategoryList[tempIndex]=toUpdateCategories[index];
 				}
 					updatedCategoryList[tempIndex]=selected_cat;
