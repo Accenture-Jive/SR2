@@ -3256,12 +3256,12 @@ $("#change_contents").hide();
 $("#start_copying_button").hide();
 
 	for(var index=0; index < mainCheckedItems.length;index++) {
-			alert("checked items : "+mainCheckedItems[index]);
+		//	alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
 		}
 		
 		for(var index=0;index < mainUncheckItems.length;index++) {
-		alert("unchecked items : "+mainUncheckItems[index]);
+		//alert("unchecked items : "+mainUncheckItems[index]);
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		//***********************************
