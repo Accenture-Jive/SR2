@@ -2111,7 +2111,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi filterss");
+	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
@@ -2144,19 +2144,19 @@ function filterCheckedUncheckCatgUrl(){
 
 	  
 function updateCategoriesForNewContents() {
-	alert("Into the updateCategories for new contents");
+	/*alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
-	for(var index=0; index < checkedItemsArray.length;index++) {
-			//alert("new checked items : "+checkedItemsArray[index]);
-			console.log("new checked items : "+checkedItemsArray[index]);
+	for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+			console.log("new checked items : "+checkItemArrayUpdated[index]);
 		}
-	for(var index=0;index < uncheckItemArray.length;index++) {
-			//alert("new unchecked items : "+uncheckItemArray[index]);
-				console.log("new unchecked items : "+uncheckItemArray[index]);
+	for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}
 
 		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
-	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);/
+	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
 		
 if(catIndex < checkItemArrayUpdated.length) {
 
@@ -2223,14 +2223,7 @@ function updateCategoriesForNewContents1() {
 
 		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
 	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
-		for(var index=0; index < checkedItemsArray.length;index++) {
-			//alert("new checked items : "+checkedItemsArray[index]);
-			console.log(" checked items : "+checkedItemsArray[index]);
-		}
-	for(var index=0;index < uncheckItemArray.length;index++) {
-			//alert("new unchecked items : "+uncheckItemArray[index]);
-				console.log(" unchecked items : "+uncheckItemArray[index]);
-		}
+		
 if(catIndex < checkedItemsArray.length) {
 
 	var contentURL = checkedItemsArray[catIndex];
