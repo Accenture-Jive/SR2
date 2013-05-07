@@ -3169,6 +3169,7 @@ function showTab(){
 // actions when user choses to select content he wants to copy/move/delete/download.
 
 //checking of checkboxes
+alert("here..");
 console.log("array Len: "+addId.length);
  for (var i=0; i<addId.length; i++) 
  {
