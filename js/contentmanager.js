@@ -2118,15 +2118,15 @@ function filterCheckedUncheckCatgUrl(){
         $(':checkbox').each(function(i){
 			
 		 val[i] = $(this).val();
-		 alert(val[i]);
+		 //alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
-		 alert("true");
+		 //alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
-				 alert("false");
+				// alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
@@ -2244,9 +2244,7 @@ if(catIndex < checkedItemsArray.length) {
 					console.log(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-				//toUpdateCategories = toUpdateCategories+','+selected_cat;
-				//toUpdateCategories = ["cat1","cat2","cat3"];
-				//toCategoriesArray = toUpdateCategories.split(",");
+				
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
 						alert("---cc-"+toUpdateCategories[index]);
@@ -2255,12 +2253,17 @@ if(catIndex < checkedItemsArray.length) {
 						if(toUpdateCategories[index] == selected_cat) {
 						isCategoryExisting = true;
 						}
+						alert("isCategoryExisting = "+isCategoryExisting);
 						
 				}
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
 						isCategoryExisting = false;
 					}
+					
+				for(var index=0;index < updatedCategoryList.length;index++,tempIndex++) {
+					console.log("VVVV-- "+updatedCategoryList[index]);
+				}
 				//toUpdateCategories = selected_cat;
 				//alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
