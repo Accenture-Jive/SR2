@@ -2108,7 +2108,7 @@ function filterCheckedUncheckCatgUrl(){
 
 	  
 function updateCategoriesForNewContents() {
-	alert("Into the updateCategories for new contents");
+	/*alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
@@ -2120,7 +2120,7 @@ function updateCategoriesForNewContents() {
 		}
 
 		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
-	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);
+	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
 		
 if(catIndex < checkItemArrayUpdated.length) {
 
@@ -2162,13 +2162,83 @@ if(catIndex < checkItemArrayUpdated.length) {
 				});
 				catIndex++;
 				updateCategoriesForNewContents();
+				
 			});
 
 }
+else {
+catIndex = 0;
+removeCategoriesForContents();
+}
 
+}
 
+function removeCategoriesForContents() {
+	/*alert("Into the updateCategories for new contents");
+	console.log("Into the updateCategories for new contents");
+	for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+			console.log("new checked items : "+checkItemArrayUpdated[index]);
+		}
+	for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+		}
 
+		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
+	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
+		
+if(catIndex < uncheckedItemArrayUpdated.length) {
 
+	var contentURL = uncheckedItemArrayUpdated[catIndex];
+	var toUpdateCategories;
+	var toCategoriesArray;
+	var updatedCategoryList = new Array();
+	
+	//alert("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
+	osapi.jive.corev3.contents.get({
+	fields: '@all',	
+	uri: contentURL
+	}).execute(function(contentCatResponseObj){
+				//alert(JSON.stringify(contentCatResponseObj));
+				console.log(JSON.stringify(contentCatResponseObj));
+				
+					//alert(contentCatResponseObj.categories);
+					//alert("selected_cat = "+selected_cat);
+				toUpdateCategories = contentCatResponseObj.categories;
+				//toUpdateCategories = toUpdateCategories+','+selected_cat;
+				//toUpdateCategories = ["cat1","cat2","cat3"];
+				//toCategoriesArray = toUpdateCategories.split(",");
+				var tempIndex =0;
+				for(var index=0;index < toUpdateCategories.length;index++) {
+						if(selected_cat != toUpdateCategories[index]){
+							alert("---cc-"+toUpdateCategories[index]);
+							console.log("---cc-"+toUpdateCategories[index]);
+							updatedCategoryList[tempIndex]=toUpdateCategories[index];
+							tempIndex++;
+						}
+				}
+				
+				//toUpdateCategories = selected_cat;
+				//alert("toUpdateCategories = "+toUpdateCategories);
+				console.log("toUpdateCategories = "+toUpdateCategories);
+				//contentCatResponseObj.categories = toUpdateCategories;
+				contentCatResponseObj.categories = updatedCategoryList;
+				contentCatResponseObj.update().execute(function(catUpdateResponse){
+				//alert(JSON.stringify(catUpdateResponse));
+				console.log(JSON.stringify(catUpdateResponse));
+				});
+				catIndex++;
+				updateCategoriesForNewContents();
+				
+			});
+
+}
+else {
+catIndex = 0;
+removeCategoriesForContents();
+}
 
 }
 	
@@ -3094,7 +3164,8 @@ if(catSelection){
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
 		catIndex = 0;
-		updateCategoriesForNewContents();
+		//updateCategoriesForNewContents();
+		removeCategoriesForContents();
 		
 		
 
