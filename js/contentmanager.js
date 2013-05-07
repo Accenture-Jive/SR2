@@ -2111,7 +2111,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi filter");
+	//  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
