@@ -2210,7 +2210,7 @@ removeCategoriesForContents();
 }
 
 function updateCategoriesForNewContents1() {
-	alert("Into the updateCategories for new contents");
+	//alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkedItemsArray.length;index++) {
 			//alert("new checked items : "+checkedItemsArray[index]);
@@ -2256,7 +2256,7 @@ if(catIndex < checkedItemsArray.length) {
 						
 						
 				}
-				alert("isCategoryExisting = "+isCategoryExisting);
+			//	alert("isCategoryExisting = "+isCategoryExisting);
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
 						isCategoryExisting = false;
@@ -2315,7 +2315,7 @@ if(catIndex < uncheckItemArray.length) {
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++) {
 						if(selected_cat != toUpdateCategories[index]){
-							alert("---cc-"+toUpdateCategories[index]);
+						//	alert("---cc-"+toUpdateCategories[index]);
 							console.log("---cc-"+toUpdateCategories[index]);
 							updatedCategoryList[tempIndex]=toUpdateCategories[index];
 							tempIndex++;
@@ -3248,7 +3248,7 @@ var all_selected='';
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(catSelection){
-	alert("catagory selectionn....");
+	//alert("catagory selectionn....");
 	$("#selection_menu").hide();
 $("#stylized").show();
 $("#change_selection_div").hide();
@@ -3267,7 +3267,7 @@ $("#start_copying_button").hide();
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
-		alert("Category "+selected_cat+" updated");
+		//alert("Category "+selected_cat+" updated");
 
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
