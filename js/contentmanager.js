@@ -2156,10 +2156,10 @@ if(catIndex < checkItemArrayUpdated.length) {
 				console.log("toUpdateCategories = "+toUpdateCategories);
 				//contentCatResponseObj.categories = toUpdateCategories;
 				contentCatResponseObj.categories = updatedCategoryList;
-				/*contentCatResponseObj.update().execute(function(catUpdateResponse){
+				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				alert(JSON.stringify(catUpdateResponse));
 				console.log(JSON.stringify(catUpdateResponse));
-				});*/
+				});
 				//updateCategoriesForNewContents();
 			});
 
