@@ -2233,7 +2233,7 @@ if(catIndex < checkedItemsArray.length) {
 	var isCategoryExisting =false;
 	
 	//alert("contentURL got is ="+contentURL);
-	console.log("contentURL got is ="+contentURL);
+	//console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
@@ -2298,13 +2298,13 @@ if(catIndex < uncheckItemArray.length) {
 	var updatedCategoryList = new Array();
 	
 	//alert("contentURL got is ="+contentURL);
-	console.log("contentURL got is ="+contentURL);
+	//console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
 				//alert(JSON.stringify(contentCatResponseObj));
-				console.log(JSON.stringify(contentCatResponseObj));
+				//console.log(JSON.stringify(contentCatResponseObj));
 				
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
@@ -2316,7 +2316,7 @@ if(catIndex < uncheckItemArray.length) {
 				for(var index=0;index < toUpdateCategories.length;index++) {
 						if(selected_cat != toUpdateCategories[index]){
 							//alert("---cc-"+toUpdateCategories[index]);
-							console.log("---cc-"+toUpdateCategories[index]);
+							//console.log("---cc-"+toUpdateCategories[index]);
 							updatedCategoryList[tempIndex]=toUpdateCategories[index];
 							tempIndex++;
 						}
@@ -2324,12 +2324,12 @@ if(catIndex < uncheckItemArray.length) {
 				
 				//toUpdateCategories = selected_cat;
 				//alert("toUpdateCategories = "+toUpdateCategories);
-				console.log("toUpdateCategories = "+toUpdateCategories);
+				//console.log("toUpdateCategories = "+toUpdateCategories);
 				//contentCatResponseObj.categories = toUpdateCategories;
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
-				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+				//console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
 				removeCategoriesForContents();
