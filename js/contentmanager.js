@@ -2338,8 +2338,9 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
-	alert("Successfully done");
+	
 	console.log("Successfully done");
+	alert("Successfully done");
 }
 
 
