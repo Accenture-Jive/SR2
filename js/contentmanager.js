@@ -2129,6 +2129,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
+	type: "document",
 	fields: '@all',
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
