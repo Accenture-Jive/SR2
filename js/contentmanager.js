@@ -2324,7 +2324,7 @@ if(catIndex < uncheckItemArray.length) {
 				console.log(JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
-				updateCategoriesForNewContents();
+				removeCategoriesForContents();
 				
 			});
 
