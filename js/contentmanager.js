@@ -2271,7 +2271,7 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
-				console.log("updated --"JSON.stringify(catUpdateResponse));
+				console.log("updated --"+JSON.stringify(catUpdateResponse));
 				catIndex++;
 				updateCategoriesForNewContents();
 				});
@@ -2329,7 +2329,7 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
-				console.log("UPDated -- "JSON.stringify(catUpdateResponse));
+				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
 				removeCategoriesForContents();
