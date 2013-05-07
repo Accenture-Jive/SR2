@@ -3264,7 +3264,7 @@ $("#start_copying_button").hide();
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		//***********************************
-		//filterCheckedUncheckCatgUrl1();
+		filterCheckedUncheckCatgUrl1();
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
 			console.log("new checked items : "+checkItemArrayUpdated[index]);
@@ -3274,7 +3274,7 @@ $("#start_copying_button").hide();
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
 		catIndex = 0;
-		//updateCategoriesForNewContents();
+		updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 		
 		
