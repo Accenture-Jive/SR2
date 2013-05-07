@@ -2023,14 +2023,14 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	 // alert("hi filter");
+	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
         $(':checkbox').each(function(i){
 			
 		 val[i] = $(this).val();
-		// alert(val[i]);
+		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 alert("true");
@@ -2111,7 +2111,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  //alert("hi filter");
+	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
@@ -2210,7 +2210,7 @@ removeCategoriesForContents();
 }
 
 function updateCategoriesForNewContents1() {
-	//alert("Into the updateCategories for new contents");
+	alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkedItemsArray.length;index++) {
 			//alert("new checked items : "+checkedItemsArray[index]);
@@ -2233,7 +2233,7 @@ if(catIndex < checkedItemsArray.length) {
 	var isCategoryExisting =false;
 	
 	//alert("contentURL got is ="+contentURL);
-	//console.log("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
@@ -2256,7 +2256,7 @@ if(catIndex < checkedItemsArray.length) {
 						
 						
 				}
-			//	alert("isCategoryExisting = "+isCategoryExisting);
+				alert("isCategoryExisting = "+isCategoryExisting);
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
 						isCategoryExisting = false;
@@ -2298,13 +2298,13 @@ if(catIndex < uncheckItemArray.length) {
 	var updatedCategoryList = new Array();
 	
 	//alert("contentURL got is ="+contentURL);
-	//console.log("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
 				//alert(JSON.stringify(contentCatResponseObj));
-				//console.log(JSON.stringify(contentCatResponseObj));
+				console.log(JSON.stringify(contentCatResponseObj));
 				
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
@@ -2315,8 +2315,8 @@ if(catIndex < uncheckItemArray.length) {
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++) {
 						if(selected_cat != toUpdateCategories[index]){
-							//alert("---cc-"+toUpdateCategories[index]);
-							//console.log("---cc-"+toUpdateCategories[index]);
+							alert("---cc-"+toUpdateCategories[index]);
+							console.log("---cc-"+toUpdateCategories[index]);
 							updatedCategoryList[tempIndex]=toUpdateCategories[index];
 							tempIndex++;
 						}
@@ -2324,23 +2324,18 @@ if(catIndex < uncheckItemArray.length) {
 				
 				//toUpdateCategories = selected_cat;
 				//alert("toUpdateCategories = "+toUpdateCategories);
-				//console.log("toUpdateCategories = "+toUpdateCategories);
+				console.log("toUpdateCategories = "+toUpdateCategories);
 				//contentCatResponseObj.categories = toUpdateCategories;
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
-				//console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
 				removeCategoriesForContents();
 				
 			});
 
-}
-else {
-	
-	console.log("Category "+selected_cat+" succesfully update");
-	alert("Category "+selected_cat+" succesfully update");
 }
 
 
@@ -2410,7 +2405,7 @@ postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
 // adding each file in a row as per the received response.
-
+alert("sdzdf");
 if (sel_action_val=='categs')
 {
 
@@ -2430,7 +2425,7 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-//alert("Files catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
+alert("Files catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
 
 
 var temp_id="file_cb"+index;
@@ -2479,7 +2474,7 @@ document.getElementById("files_div").innerHTML=files_row;
 function getBlogs(blog_url)
 {
 // getting the blogs from the selected space/group/project using the BLOG_URL.
-//alert("get blogs");
+alert("get blogs");
 osapi.jive.corev3.contents.get({
 type : 'post',
 fields : '@all',
@@ -2551,7 +2546,7 @@ if (categg2[ind]==selected_cat)
 console.log("categg2= "+categg2);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("blog_cb"+index).value);
-//alert("Blogs catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
+alert("Blogs catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
 var temp_id="blog_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
@@ -3193,7 +3188,6 @@ $("#idea_div").hide();
 $("#poll_div").hide();
 $("#blog_div").hide();
 
-
 $("#files_tab").click(function () {
 $("#files_div").show();
 $("#docs_div").hide();
@@ -3254,7 +3248,7 @@ var all_selected='';
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(catSelection){
-	//alert("catagory selectionn....");
+	alert("catagory selectionn....");
 	$("#selection_menu").hide();
 $("#stylized").show();
 $("#change_selection_div").hide();
@@ -3273,7 +3267,7 @@ $("#start_copying_button").hide();
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
-		
+		alert("Category "+selected_cat+" updated");
 
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
