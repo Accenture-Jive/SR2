@@ -2047,10 +2047,11 @@ function filterCheckedUncheckCatgUrl(){
 	
 	    });
 			/*Print the checked and the unchecked*/
+			alert("checkedItemsArray .length = "+checkedItemsArray.length);
 		for(var index=0; index < checkedItemsArray.length;index++) {
 			alert("checked items : "+checkedItemsArray[index]);
 		}
-		
+		alert("uncheckItemArray .length = "+uncheckItemArray.length);
 		for(var index=0;index < uncheckItemArray.length;index++) {
 			alert("unchecked items : "+uncheckItemArray[index]);
 		}
