@@ -2140,7 +2140,11 @@ if(catIndex < checkItemArrayUpdated.length) {
 				toUpdateCategories = contentCatResponseObj.categories;
 				toUpdateCategories = '['+toUpdateCategories+','+selected_cat+']';
 				alert("toUpdateCategories = "+toUpdateCategories);
-				
+				contentCatResponseObj.categories = toUpdateCategories;
+				contentCatResponseObj.update().execute(function(catUpdateResponse){
+				alert(JSON.stringify(catUpdateResponse));
+				console.log(JSON.stringify(catUpdateResponse));
+				});
 				//updateCategoriesForNewContents();
 			});
 
