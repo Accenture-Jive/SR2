@@ -2023,14 +2023,14 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi filter");
+	 // alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
         $(':checkbox').each(function(i){
 			
 		 val[i] = $(this).val();
-		 alert(val[i]);
+		// alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 alert("true");
@@ -2111,7 +2111,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi filter");
+	  //alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
@@ -2210,7 +2210,7 @@ removeCategoriesForContents();
 }
 
 function updateCategoriesForNewContents1() {
-	alert("Into the updateCategories for new contents");
+	//alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkedItemsArray.length;index++) {
 			//alert("new checked items : "+checkedItemsArray[index]);
@@ -2256,7 +2256,7 @@ if(catIndex < checkedItemsArray.length) {
 						
 						
 				}
-				alert("isCategoryExisting = "+isCategoryExisting);
+			//	alert("isCategoryExisting = "+isCategoryExisting);
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
 						isCategoryExisting = false;
@@ -3248,7 +3248,7 @@ var all_selected='';
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(catSelection){
-	alert("catagory selectionn....");
+	//alert("catagory selectionn....");
 	$("#selection_menu").hide();
 $("#stylized").show();
 $("#change_selection_div").hide();
