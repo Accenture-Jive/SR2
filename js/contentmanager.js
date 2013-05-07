@@ -2124,7 +2124,6 @@ if(catIndex < checkItemArrayUpdated.length) {
 	var contentURL = checkItemArrayUpdated[catIndex];
 	
 	osapi.jive.corev3.contents.get({
-	type : contentType,
 	fields: '@all',
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
