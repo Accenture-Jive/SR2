@@ -2329,7 +2329,7 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
-				console.log(JSON.stringify(catUpdateResponse));
+				console.log("UPDated -- "JSON.stringify(catUpdateResponse));
 				});
 				catIndex++;
 				removeCategoriesForContents();
