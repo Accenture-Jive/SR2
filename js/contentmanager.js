@@ -2273,7 +2273,7 @@ if(catIndex < checkedItemsArray.length) {
 				
 				console.log("updated --"+JSON.stringify(catUpdateResponse));
 				catIndex++;
-				updateCategoriesForNewContents();
+				updateCategoriesForNewContents1();
 				});
 				
 				
