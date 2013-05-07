@@ -2125,6 +2125,7 @@ function updateCategoriesForNewContents() {
 if(catIndex < checkItemArrayUpdated.length) {
 
 	var contentURL = checkItemArrayUpdated[catIndex];
+	var toUpdateCategories;
 	
 	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
@@ -2133,6 +2134,11 @@ if(catIndex < checkItemArrayUpdated.length) {
 	uri: 'https://acn.jiveon.com/api/core/v3/contents/23352'
 	}).execute(function(contentCatResponseObj){
 				alert(JSON.stringify(contentCatResponseObj));
+
+				toUpdateCategories = contentCatResponseObj.categories;
+				for(var index=0;i<toUpdateCategories.length;index++) {
+					alert(toUpdateCategories[index]);
+				}
 				//updateCategoriesForNewContents();
 			});
 
