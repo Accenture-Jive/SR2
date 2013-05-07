@@ -2272,10 +2272,10 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
 				console.log("updated --"+JSON.stringify(catUpdateResponse));
+				
+				});
 				catIndex++;
 				updateCategoriesForNewContents1();
-				});
-				
 				
 			});
 
