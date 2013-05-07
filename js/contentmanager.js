@@ -2129,17 +2129,17 @@ if(catIndex < checkItemArrayUpdated.length) {
 	var toCategoriesArray;
 	var updatedCategoryList = new Array();
 	
-	alert("contentURL got is ="+contentURL);
+	//alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
-				alert(JSON.stringify(contentCatResponseObj));
+				//alert(JSON.stringify(contentCatResponseObj));
 				console.log(JSON.stringify(contentCatResponseObj));
 				
-					alert(contentCatResponseObj.categories);
-					alert("selected_cat = "+selected_cat);
+					//alert(contentCatResponseObj.categories);
+					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
@@ -2152,15 +2152,16 @@ if(catIndex < checkItemArrayUpdated.length) {
 				}
 					updatedCategoryList[tempIndex]=selected_cat;
 				//toUpdateCategories = selected_cat;
-				alert("toUpdateCategories = "+toUpdateCategories);
+				//alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
 				//contentCatResponseObj.categories = toUpdateCategories;
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
-				alert(JSON.stringify(catUpdateResponse));
+				//alert(JSON.stringify(catUpdateResponse));
 				console.log(JSON.stringify(catUpdateResponse));
 				});
-				//updateCategoriesForNewContents();
+				catIndex++;
+				updateCategoriesForNewContents();
 			});
 
 }
