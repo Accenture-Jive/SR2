@@ -2119,10 +2119,15 @@ function updateCategoriesForNewContents() {
 				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}
 
+		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
+	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);
+		
 if(catIndex < checkItemArrayUpdated.length) {
 
 	var contentURL = checkItemArrayUpdated[catIndex];
 	
+	alert("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',
 	uri: contentURL
