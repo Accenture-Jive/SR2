@@ -2109,7 +2109,7 @@ function filterCheckedUncheckCatgUrl(){
 	  
 function updateCategoriesForNewContents() {
 
-checkItemArrayUpdated;
+
 if(catIndex < checkItemArrayUpdated.length) {
 
 	var contentURL = checkItemArrayUpdated[catIndex];
