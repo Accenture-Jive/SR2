@@ -2108,9 +2108,16 @@ function filterCheckedUncheckCatgUrl(){
 
 	  
 function updateCategoriesForNewContents() {
-
-checkItemArrayUpdated;
-
+	alert("Into the updateCategories for new contents");
+	console.log("Into the updateCategories for new contents");
+	for(var index=0; index < checkItemArrayUpdated.length;index++) {
+			alert("new checked items : "+checkItemArrayUpdated[index]);
+			console.log("new checked items : "+checkItemArrayUpdated[index]);
+		}
+	for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+		}
 
 
 
@@ -3040,7 +3047,7 @@ if(catSelection){
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
 		catIndex = 0;
-		//updateCategoriesForNewContents();
+		updateCategoriesForNewContents();
 		
 		
 
