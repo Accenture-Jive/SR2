@@ -2241,7 +2241,7 @@ if(catIndex < checkedItemsArray.length) {
 				//alert(JSON.stringify(contentCatResponseObj));
 				console.log(JSON.stringify(contentCatResponseObj));
 				
-					//alert(contentCatResponseObj.categories);
+					console.log(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
