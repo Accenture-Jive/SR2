@@ -2337,6 +2337,10 @@ if(catIndex < uncheckItemArray.length) {
 			});
 
 }
+else {
+	console.log("Category "+selected_cat+" succesfully updated");
+		alert("Category "+selected_cat+" succesfully updated");
+}
 
 
 
