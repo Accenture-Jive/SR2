@@ -2126,6 +2126,8 @@ if(catIndex < checkItemArrayUpdated.length) {
 
 	var contentURL = checkItemArrayUpdated[catIndex];
 	var toUpdateCategories;
+	var toCategoriesArray;
+	var updatedCategoryList = new Array();
 	
 	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
@@ -2140,15 +2142,21 @@ if(catIndex < checkItemArrayUpdated.length) {
 					alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
 				toUpdateCategories = toUpdateCategories+','+selected_cat;
-				toUpdateCategories = ["cat1","cat2","cat3"];
+				//toUpdateCategories = ["cat1","cat2","cat3"];
+				toCategoriesArray = toUpdateCategories.split(",");
+				
+				for(var index=0;index < toCategoriesArray.length;index++) {
+					alert("---cc-"toCategoriesArray[index]);
+				}
+				
 				//toUpdateCategories = selected_cat;
 				alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
 				contentCatResponseObj.categories = toUpdateCategories;
-				contentCatResponseObj.update().execute(function(catUpdateResponse){
+				/*contentCatResponseObj.update().execute(function(catUpdateResponse){
 				alert(JSON.stringify(catUpdateResponse));
 				console.log(JSON.stringify(catUpdateResponse));
-				});
+				});*/
 				//updateCategoriesForNewContents();
 			});
 
