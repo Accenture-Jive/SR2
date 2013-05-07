@@ -2140,19 +2140,21 @@ if(catIndex < checkItemArrayUpdated.length) {
 				
 					alert(contentCatResponseObj.categories);
 					alert("selected_cat = "+selected_cat);
-				toUpdateCategories = contentCatResponseObj.categories;
-				toUpdateCategories = toUpdateCategories+','+selected_cat;
+				//toUpdateCategories = contentCatResponseObj.categories;
+				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
 				toCategoriesArray = toUpdateCategories.split(",");
-				
-				for(var index=0;index < toCategoriesArray.length;index++) {
-					alert("---cc-"+toCategoriesArray[index]);
+				var tempIndex =0;
+				for(var index=0;index < toCategoriesArray.length;index++,tempIndex++) {
+						alert("---cc-"+toCategoriesArray[index]);
+						updatedCategoryList[tempIndex]=toCategoriesArray[index];
 				}
-				
+					updatedCategoryList[tempIndex]=selected_cat;
 				//toUpdateCategories = selected_cat;
 				alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
-				contentCatResponseObj.categories = toUpdateCategories;
+				//contentCatResponseObj.categories = toUpdateCategories;
+				contentCatResponseObj.categories = updatedCategoryList;
 				/*contentCatResponseObj.update().execute(function(catUpdateResponse){
 				alert(JSON.stringify(catUpdateResponse));
 				console.log(JSON.stringify(catUpdateResponse));
