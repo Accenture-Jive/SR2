@@ -2329,10 +2329,7 @@ if(catIndex < uncheckItemArray.length) {
 			});
 
 }
-else {
-catIndex = 0;
-removeCategoriesForContents();
-}
+
 
 }
 	
