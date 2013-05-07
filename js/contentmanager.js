@@ -2076,6 +2076,7 @@ function filterCheckedUncheckCatgUrl(){
 		
 		for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
+			console.log("new checked items : "+checkItemArrayUpdated[index]);
 		}
 		
 		for(var outerIndex=0;outerIndex < uncheckItemArray.length;outerIndex++) {
@@ -2096,6 +2097,7 @@ function filterCheckedUncheckCatgUrl(){
 		
 		for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
 			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}
 		
 		
