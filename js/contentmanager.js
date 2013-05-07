@@ -2136,11 +2136,11 @@ if(catIndex < checkItemArrayUpdated.length) {
 				alert(JSON.stringify(contentCatResponseObj));
 				
 					alert(contentCatResponseObj.categories);
+					alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-			
-				for(var index=0;i<toUpdateCategories.length;index++) {
-					alert(toUpdateCategories[index]);
-				}
+				toUpdateCategories = '['+toUpdateCategories+',selected_cat]';
+				alert("toUpdateCategories = "+toUpdateCategories);
+				
 				//updateCategoriesForNewContents();
 			});
 
