@@ -2111,7 +2111,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi filter");
+	  alert("hi filterss");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
@@ -3242,7 +3242,7 @@ function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(catSelection){
 	alert("catagory selectionn....");
-	for(var index=0; index < mainCheckedItems.length;index++) {
+	/*for(var index=0; index < mainCheckedItems.length;index++) {
 			alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
 		}
@@ -3250,7 +3250,7 @@ if(catSelection){
 		for(var index=0;index < mainUncheckItems.length;index++) {
 		alert("unchecked items : "+mainUncheckItems[index]);
 			console.log("unchecked items : "+mainUncheckItems[index]);
-		}
+		}*/
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
