@@ -2271,7 +2271,7 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
-				console.log(JSON.stringify(catUpdateResponse));
+				console.log("updated --"JSON.stringify(catUpdateResponse));
 				catIndex++;
 				updateCategoriesForNewContents();
 				});
