@@ -2232,7 +2232,7 @@ if(catIndex < checkedItemsArray.length) {
 	var updatedCategoryList = new Array();
 	var isCategoryExisting =false;
 	
-	//alert("contentURL got is ="+contentURL);
+	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
@@ -2252,7 +2252,10 @@ if(catIndex < checkedItemsArray.length) {
 						alert("---cc-"+toUpdateCategories[index]);
 						console.log("---cc-"+toUpdateCategories[index]);
 						updatedCategoryList[tempIndex]=toUpdateCategories[index];
+						if(toUpdateCategories[index] == selected_cat) {
 						isCategoryExisting = true;
+						}
+						
 				}
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
