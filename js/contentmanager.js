@@ -2109,21 +2109,8 @@ function filterCheckedUncheckCatgUrl(){
 	  
 function updateCategoriesForNewContents() {
 
+checkItemArrayUpdated;
 
-if(catIndex < checkItemArrayUpdated.length) {
-
-	var contentURL = checkItemArrayUpdated[catIndex];
-	
-	osapi.jive.corev3.contents.get({
-	type : contentType,
-	fields: '@all',
-	uri: contentURL
-	}).execute(function(contentCatResponse){
-					alert(JSON.stringify(contentCatResponse);
-					//updateCategoriesForNewContents();
-			});
-
-}
 
 
 
@@ -3053,7 +3040,7 @@ if(catSelection){
 			console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}*/
 		catIndex = 0;
-		updateCategoriesForNewContents();
+		//updateCategoriesForNewContents();
 		
 		
 
