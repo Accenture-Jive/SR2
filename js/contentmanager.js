@@ -2135,7 +2135,7 @@ function filterCheckedUncheckCatgUrl(){
 	
 	    });
 		
-		
+		catIndex=0;
 		updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 
@@ -2256,6 +2256,7 @@ if(catIndex < checkedItemsArray.length) {
 				}
 					if(!isCategoryExisting){
 						updatedCategoryList[tempIndex]=selected_cat;
+						isCategoryExisting = false;
 					}
 				//toUpdateCategories = selected_cat;
 				//alert("toUpdateCategories = "+toUpdateCategories);
