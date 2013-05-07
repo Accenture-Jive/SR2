@@ -2315,7 +2315,7 @@ if(catIndex < uncheckItemArray.length) {
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++) {
 						if(selected_cat != toUpdateCategories[index]){
-							alert("---cc-"+toUpdateCategories[index]);
+							//alert("---cc-"+toUpdateCategories[index]);
 							console.log("---cc-"+toUpdateCategories[index]);
 							updatedCategoryList[tempIndex]=toUpdateCategories[index];
 							tempIndex++;
@@ -2336,6 +2336,10 @@ if(catIndex < uncheckItemArray.length) {
 				
 			});
 
+}
+else {
+	alert("Successfully done");
+	console.log("Successfully done");
 }
 
 
@@ -3267,7 +3271,7 @@ $("#start_copying_button").hide();
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
-		alert("Category "+selected_cat+" updated");
+		
 
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
