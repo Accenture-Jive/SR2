@@ -2023,7 +2023,7 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	  alert("hi");
+	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
@@ -2047,13 +2047,13 @@ function filterCheckedUncheckCatgUrl(){
 	
 	    });
 			/*Print the checked and the unchecked*/
-		/*for(var index=0; index < checkedItemsArray.length;index++) {
+		for(var index=0; index < checkedItemsArray.length;index++) {
 			alert("checked items : "+checkedItemsArray[index]);
 		}
 		
 		for(var index=0;index < uncheckItemArray.length;index++) {
 			alert("unchecked items : "+uncheckItemArray[index]);
-		}*/
+		}
 		
 		/*Filter the the list */
 		var checkedIndex = 0;
