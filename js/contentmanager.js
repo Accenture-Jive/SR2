@@ -2132,7 +2132,7 @@ if(catIndex < checkItemArrayUpdated.length) {
 	fields: '@all',	
 	uri: 'https://acn.jiveon.com/api/core/v3/contents/23352'
 	}).execute(function(contentCatResponseObj){
-				JSON.stringify(contentCatResponseObj);
+				alert(JSON.stringify(contentCatResponseObj));
 				//updateCategoriesForNewContents();
 			});
 
