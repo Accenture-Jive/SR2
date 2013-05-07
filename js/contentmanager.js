@@ -2130,8 +2130,8 @@ if(catIndex < checkItemArrayUpdated.length) {
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	type: "document",
-	fields: '@all',
-	uri: contentURL
+	fields: '@all',	
+	uri: "https://acn.jiveon.com/api/core/v3/contents/23352"
 	}).execute(function(contentCatResponseObj){
 				JSON.stringify(contentCatResponseObj);
 				//updateCategoriesForNewContents();
