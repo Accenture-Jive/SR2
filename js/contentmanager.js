@@ -2223,7 +2223,14 @@ function updateCategoriesForNewContents1() {
 
 		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
 	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
-		
+		for(var index=0; index < checkedItemsArray.length;index++) {
+			//alert("new checked items : "+checkedItemsArray[index]);
+			console.log(" checked items : "+checkedItemsArray[index]);
+		}
+	for(var index=0;index < uncheckItemArray.length;index++) {
+			//alert("new unchecked items : "+uncheckItemArray[index]);
+				console.log(" unchecked items : "+uncheckItemArray[index]);
+		}
 if(catIndex < checkedItemsArray.length) {
 
 	var contentURL = checkedItemsArray[catIndex];
