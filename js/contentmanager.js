@@ -2106,6 +2106,41 @@ function filterCheckedUncheckCatgUrl(){
 
 		
 		}
+		
+	function filterCheckedUncheckCatgUrl1(){
+	
+     
+	  
+	  alert("hi filter");
+	  var checkedIndex = 0;
+	  var uncheckedIndex = 0;
+        var val = [];
+        $(':checkbox').each(function(i){
+			
+		 val[i] = $(this).val();
+		 alert(val[i]);
+		 if(val[i] != 'on'){
+		 if($(this).is(':checked')){
+		 alert("true");
+			checkedItemsArray[checkedIndex] = $(this).val();
+			checkedIndex++;
+		 }
+		 else {
+				 alert("false");
+			uncheckItemArray[uncheckedIndex] = $(this).val();
+			uncheckedIndex++;
+		}
+		}
+		
+	
+	    });
+		
+		
+		//updateCategoriesForNewContents1();
+		removeCategoriesForContents();
+
+		
+		}
 
 	  
 function updateCategoriesForNewContents() {
@@ -2174,7 +2209,7 @@ removeCategoriesForContents();
 
 }
 
-function removeCategoriesForContents() {
+function updateCategoriesForNewContents1() {
 	/*alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkItemArrayUpdated.length;index++) {
@@ -2189,9 +2224,67 @@ function removeCategoriesForContents() {
 		alert("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex ="+catIndex);
 	console.log("checkItemArrayUpdated.length = "+checkItemArrayUpdated.length+" catIndex="+catIndex);*/
 		
-if(catIndex < uncheckedItemArrayUpdated.length) {
+if(catIndex < checkedItemsArray.length) {
 
-	var contentURL = uncheckedItemArrayUpdated[catIndex];
+	var contentURL = checkedItemsArray[catIndex];
+	var toUpdateCategories;
+	var toCategoriesArray;
+	var updatedCategoryList = new Array();
+	var isCategoryExisting =false;
+	
+	//alert("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
+	osapi.jive.corev3.contents.get({
+	fields: '@all',	
+	uri: contentURL
+	}).execute(function(contentCatResponseObj){
+				//alert(JSON.stringify(contentCatResponseObj));
+				console.log(JSON.stringify(contentCatResponseObj));
+				
+					//alert(contentCatResponseObj.categories);
+					//alert("selected_cat = "+selected_cat);
+				toUpdateCategories = contentCatResponseObj.categories;
+				//toUpdateCategories = toUpdateCategories+','+selected_cat;
+				//toUpdateCategories = ["cat1","cat2","cat3"];
+				//toCategoriesArray = toUpdateCategories.split(",");
+				var tempIndex =0;
+				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
+						alert("---cc-"+toUpdateCategories[index]);
+						console.log("---cc-"+toUpdateCategories[index]);
+						updatedCategoryList[tempIndex]=toUpdateCategories[index];
+						isCategoryExisting = true;
+				}
+					if(!isCategoryExisting){
+						updatedCategoryList[tempIndex]=selected_cat;
+					}
+				//toUpdateCategories = selected_cat;
+				//alert("toUpdateCategories = "+toUpdateCategories);
+				console.log("toUpdateCategories = "+toUpdateCategories);
+				//contentCatResponseObj.categories = toUpdateCategories;
+				contentCatResponseObj.categories = updatedCategoryList;
+				contentCatResponseObj.update().execute(function(catUpdateResponse){
+				//alert(JSON.stringify(catUpdateResponse));
+				console.log(JSON.stringify(catUpdateResponse));
+				});
+				catIndex++;
+				updateCategoriesForNewContents();
+				
+			});
+
+}
+else {
+catIndex = 0;
+removeCategoriesForContents();
+}
+
+}
+
+function removeCategoriesForContents() {
+	
+		
+if(catIndex < uncheckItemArray.length) {
+
+	var contentURL = uncheckItemArray[catIndex];
 	var toUpdateCategories;
 	var toCategoriesArray;
 	var updatedCategoryList = new Array();
@@ -3155,7 +3248,7 @@ if(catSelection){
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		//***********************************
-		filterCheckedUncheckCatgUrl();
+		filterCheckedUncheckCatgUrl1();
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
 			console.log("new checked items : "+checkItemArrayUpdated[index]);
