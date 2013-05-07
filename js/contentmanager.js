@@ -2131,14 +2131,14 @@ if(catIndex < checkItemArrayUpdated.length) {
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
-	uri: 'https://acn.jiveon.com/api/core/v3/contents/23352'
+	uri: contentURL
 	}).execute(function(contentCatResponseObj){
 				alert(JSON.stringify(contentCatResponseObj));
 				
 					alert(contentCatResponseObj.categories);
 					alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-				toUpdateCategories = '['+toUpdateCategories+','+selected_cat+']';
+				toUpdateCategories = toUpdateCategories+','+selected_cat+;
 				alert("toUpdateCategories = "+toUpdateCategories);
 				contentCatResponseObj.categories = toUpdateCategories;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
