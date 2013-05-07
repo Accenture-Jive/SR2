@@ -2134,8 +2134,10 @@ if(catIndex < checkItemArrayUpdated.length) {
 	uri: 'https://acn.jiveon.com/api/core/v3/contents/23352'
 	}).execute(function(contentCatResponseObj){
 				alert(JSON.stringify(contentCatResponseObj));
-
+				
+					alert(contentCatResponseObj.categories);
 				toUpdateCategories = contentCatResponseObj.categories;
+			
 				for(var index=0;i<toUpdateCategories.length;index++) {
 					alert(toUpdateCategories[index]);
 				}
