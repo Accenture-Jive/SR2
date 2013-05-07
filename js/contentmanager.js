@@ -3169,7 +3169,6 @@ function showTab(){
 // actions when user choses to select content he wants to copy/move/delete/download.
 
 //checking of checkboxes
-alert("here..");
 console.log("array Len: "+addId.length);
  for (var i=0; i<addId.length; i++) 
  {
@@ -3182,6 +3181,11 @@ $("#stylized").hide();
 $("#selection_menu").show();
 
 $("#files_div").show();
+$("#docs_div").hide();
+$("#disc_div").hide();
+$("#idea_div").hide();
+$("#poll_div").hide();
+$("#blog_div").hide();
 
 $("#files_tab").click(function () {
 $("#files_div").show();
