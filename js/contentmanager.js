@@ -2213,16 +2213,16 @@ function updateCategoriesForNewContents1() {
 	alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
 	for(var index=0; index < checkedItemsArray.length;index++) {
-			alert("new checked items : "+checkedItemsArray[index]);
-			console.log("new checked items : "+checkedItemsArray[index]);
+			//alert("new checked items : "+checkedItemsArray[index]);
+			//console.log("new checked items : "+checkedItemsArray[index]);
 		}
 	for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
-			alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
-				console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+			//alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+			//	console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
 		}
 
-		alert("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex ="+catIndex);
-	console.log("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex="+catIndex);
+		//alert("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex ="+catIndex);
+	//console.log("checkItemArrayUpdated.length = "+uncheckItemArray.length+" catIndex="+catIndex);
 		
 if(catIndex < checkedItemsArray.length) {
 
@@ -2232,23 +2232,23 @@ if(catIndex < checkedItemsArray.length) {
 	var updatedCategoryList = new Array();
 	var isCategoryExisting =false;
 	
-	alert("contentURL got is ="+contentURL);
+	//alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentCatResponseObj){
 				//alert(JSON.stringify(contentCatResponseObj));
-				console.log(JSON.stringify(contentCatResponseObj));
+				//console.log(JSON.stringify(contentCatResponseObj));
 				
-					console.log(contentCatResponseObj.categories);
+					//console.log(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
 				
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
-						alert("---cc-"+toUpdateCategories[index]);
-						console.log("---cc-"+toUpdateCategories[index]);
+						//alert("---cc-"+toUpdateCategories[index]);
+						//console.log("---cc-"+toUpdateCategories[index]);
 						updatedCategoryList[tempIndex]=toUpdateCategories[index];
 						if(toUpdateCategories[index] == selected_cat) {
 						isCategoryExisting = true;
@@ -2263,15 +2263,15 @@ if(catIndex < checkedItemsArray.length) {
 					}
 					
 				for(var index=0;index < updatedCategoryList.length;index++,tempIndex++) {
-					console.log("VVVV-- "+updatedCategoryList[index]);
+					//console.log("VVVV-- "+updatedCategoryList[index]);
 				}
 				
-				console.log("toUpdateCategories = "+toUpdateCategories);
+				//console.log("toUpdateCategories = "+toUpdateCategories);
 				
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
-				console.log("updated --"+JSON.stringify(catUpdateResponse));
+				//console.log("updated --"+JSON.stringify(catUpdateResponse));
 				
 				});
 				catIndex++;
@@ -2337,9 +2337,7 @@ if(catIndex < uncheckItemArray.length) {
 			});
 
 }
-else {
-	alert("Category "+selected_cat+" updated");
-}
+
 
 
 }
@@ -3268,6 +3266,9 @@ $("#start_copying_button").hide();
 		}
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
+		
+		alert("Category "+selected_cat+" updated");
+
 		/*for(var index=0; index < checkItemArrayUpdated.length;index++) {
 			alert("new checked items : "+checkItemArrayUpdated[index]);
 			console.log("new checked items : "+checkItemArrayUpdated[index]);
