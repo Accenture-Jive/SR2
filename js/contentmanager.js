@@ -2339,8 +2339,8 @@ if(catIndex < uncheckItemArray.length) {
 }
 else {
 	
-	console.log("Successfully done");
-	alert("Successfully done");
+	console.log("Category "+selected_cat+" succesfully update");
+	alert("Category "+selected_cat+" succesfully update");
 }
 
 
