@@ -2345,9 +2345,11 @@ else {
 		alert("source_html_url = "+source_html_url);
 		alert("temRedirectionUrl = "+tempRedirectionUrl);
 		console.log("temRedirectionUrl = "+tempRedirectionUrl);
-		$("#stylized").fadeOut(5000,function(){
+		/*$("#stylized").fadeOut(5000,function(){
 		window.location = window.location = tempRedirectionUrl;
-			});
+			});*/
+			
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";
 		
 }
 
