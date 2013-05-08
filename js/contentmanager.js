@@ -816,7 +816,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
-$("#catTo").hide();
+$("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
 
