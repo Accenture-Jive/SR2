@@ -2341,6 +2341,7 @@ else {
 	console.log("Category "+selected_cat+" succesfully updated");
 		alert("Category "+selected_cat+" succesfully updated");
 		var temRedirectionUrl = redirection_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
+		alert("redirection_url = "+redirection_url);
 		alert("temRedirectionUrl = "+temRedirectionUrl);
 		console.log("temRedirectionUrl = "+temRedirectionUrl);
 		$("#stylized").fadeOut(5000,function(){
