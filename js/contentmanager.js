@@ -816,7 +816,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
-$("#catTo").show();
+$("#catTo").hide();
 getDocs(space_url);
 getFiles(space_url);
 
@@ -3271,6 +3271,7 @@ $("#button_div").hide();
 $("#cat_place").hide();
 $("#cat_sel").hide();
 $("#selCat").hide();
+$("#catTo").show();
 $("#cat_select_items_button").hide();
 
 
