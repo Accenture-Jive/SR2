@@ -3251,7 +3251,8 @@ var all_selected='';
 
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
-if(sel_action_val=="categs"){
+if(sel_action_val=="categs")
+{
 	//alert("catagory selectionn....");
 	//alert("browserName = "+browserName);
 
@@ -3267,30 +3268,16 @@ $("#src_place").hide();
 $("#start_copying_button").hide();
 $("#change_contents").hide();
 $("#button_div").hide();
-$("#button_div").hide();
 $("#cat_place").hide();
 $("#cat_sel").hide();
 $("#selCat").hide();
 $("#cat_select_items_button").hide();
 
-var iframe = '<iframe id="frame1" src = "javascript:"&nbsp;" style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
+var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
 $("#catTo").text("Updating this:");
 
 $("#selected_items").show();
-
-$("#catTo").text("Updating Catagories this:");
-
-if(browserName=="MSIE")
-{
-var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
-document.getElementById("selected_items").innerHTML=ieSpan; 
-}
-else if(browserName=="MSIE")
-{
-var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
-document.getElementById("selected_items").innerHTML=ieSpan; 
-}
 
 if(browserName=="MSIE")
 {
