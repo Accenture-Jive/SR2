@@ -3252,8 +3252,15 @@ var all_selected='';
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(sel_action_val=="categs"){
-	//alert("catagory selectionn....");
+	alert("catagory selectionn....");
 	
+
+
+$("#selection_menu").hide();
+$("#stylized").show();
+$("#change_selection_div").hide();
+$("#change_contents").hide();
+$("#start_copying_button").hide();
 
 $("#cmdu").show();
 $("#src_place").hide();
