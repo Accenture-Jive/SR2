@@ -3259,7 +3259,7 @@ if(sel_action_val=="categs")
 
 $("#selection_menu").hide();
 $("#stylized").show();
-$("#change_selection_div").hide();
+$("#change_selection_div").show();
 $("#change_contents").hide();
 $("#start_copying_button").hide();
 
