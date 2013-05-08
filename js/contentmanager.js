@@ -3254,10 +3254,8 @@ function goBack(){
 if(sel_action_val=="categs"){
 	//alert("catagory selectionn....");
 	
-	var iframe = '<iframe id="frame1" src = "javascript:"&nbsp;" style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
-document.getElementById("selected_items").innerHTML=iframe;  
-$("#copyTo").text("Updating this:");
-}
+
+
 	$("#selection_menu").hide();
 $("#stylized").show();
 $("#change_selection_div").hide();
@@ -3271,6 +3269,24 @@ $("#change_contents").hide();
 $("#button_div").hide();
 $("#del_place").hide();
 $("#deleteTo").text("Updating Catagories this:");
+
+if(browserName=="MSIE" && globalAction == 'move')
+{
+var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
+document.getElementById("selected_items").innerHTML=ieSpan; 
+}
+else if(browserName=="MSIE" && globalAction == 'delete')
+{
+var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
+document.getElementById("selected_items").innerHTML=ieSpan; 
+}
+else
+{
+var iframe = '<iframe id="frame1" src = "javascript:"&nbsp;" style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
+document.getElementById("selected_items").innerHTML=iframe;  
+$("#copyTo").text("Moving this:");
+}
+
 
 if(browserName=="MSIE")
 {
