@@ -829,7 +829,7 @@ getBlogs(blog_url);
 }
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
-
+alert("fromSpaceRequest..");
 var from_place_name='';
 src_space_name='';
 dest_space_name='';
