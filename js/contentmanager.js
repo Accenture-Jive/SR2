@@ -2022,8 +2022,7 @@ var uncheckedItemArrayUpdated = new Array();
 
 function filterCheckedUncheckCatgUrl(){
 	
-     checkedItemsArray = new Array();
-	 uncheckItemArray = new Array();
+     
  
 	  alert("hi filter");
 	  var checkedIndex = 0;
@@ -2111,7 +2110,8 @@ function filterCheckedUncheckCatgUrl(){
 		
 	function filterCheckedUncheckCatgUrl1(){
 	
-     
+     checkedItemsArray = new Array();
+	 uncheckItemArray = new Array();
 	  
 	//  alert("hi filter");
 	  var checkedIndex = 0;
