@@ -3253,6 +3253,11 @@ function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(sel_action_val=="categs"){
 	//alert("catagory selectionn....");
+	
+	var iframe = '<iframe id="frame1" src = "javascript:"&nbsp;" style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
+document.getElementById("selected_items").innerHTML=iframe;  
+$("#copyTo").text("Updating this:");
+}
 	$("#selection_menu").hide();
 $("#stylized").show();
 $("#change_selection_div").hide();
