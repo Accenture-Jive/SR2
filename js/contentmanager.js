@@ -3436,7 +3436,7 @@ all_selected='<table name="all_selected_items" id="all_selected_items" border="0
 +'<col width="400px" /><col width="120px" /><col width="10px" />'+
 '<tr><td colspan="4" style="border:1px ;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: center;" valign="middle"><strong>No content selected.</strong></td></tr></table>';
 document.getElementById("start_copying_button").disabled = true;
-document.getElementById("selected_items").innerHTML=all_selected;
+//document.getElementById("selected_items").innerHTML=all_selected;
 }
 
 };
