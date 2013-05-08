@@ -3251,7 +3251,7 @@ var all_selected='';
 
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
-if(catSelectionsel_action_val=="categs"){
+if(sel_action_val=="categs"){
 	//alert("catagory selectionn....");
 	$("#selection_menu").hide();
 $("#stylized").show();
@@ -3259,17 +3259,25 @@ $("#change_selection_div").hide();
 $("#change_contents").hide();
 $("#start_copying_button").hide();
 
+$("#cmdu").show();
+$("#src_place").hide();
+$("#start_copying_button").hide();
+$("#change_contents").hide();
+$("#button_div").hide();
+$("#del_place").hide();
+$("#deleteTo").text("Updating Catagories this:");
+
 if(browserName=="MSIE")
 {
 var finalurl=redirection_url+'/content';
-document.getElementById("ieSpan").innerHTML = 'The selected contents are being moved. The moved contents will appear here in a short while: <a href='+finalurl+'>'+dest_space_name+' - Contents</a>';
+document.getElementById("ieSpan").innerHTML = 'The selected contents are being update with category. The update contents will appear here in a short while: <a href='+'URL'+'>'+''+' - Contents</a>';
 }
 else
 {
 document.getElementById("frame1").contentDocument.body.style.fontFamily="Tahoma";	
 document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
 document.getElementById("frame1").contentDocument.body.style.color='Grey';
-document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progress.<br>Please leave this window open until the "+str+"process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
+document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Updating content'.fontcolor("#3778C7")+"</span>";
 }
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
