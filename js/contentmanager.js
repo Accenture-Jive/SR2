@@ -2342,14 +2342,17 @@ else {
 	console.log("Category "+selected_cat+" succesfully updated");
 		alert("Category "+selected_cat+" succesfully updated");
 		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
-		alert("source_html_url = "+source_html_url);
-		alert("temRedirectionUrl = "+tempRedirectionUrl);
+		
 		console.log("temRedirectionUrl = "+tempRedirectionUrl);
 		/*$("#stylized").fadeOut(5000,function(){
 		window.location = window.location = tempRedirectionUrl;
 			});*/
 			
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";
+		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
+		var str='Updating categories completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+		alert("source_html_url = "+source_html_url);
+		alert("temRedirectionUrl = "+tempRedirectionUrl);
 		
 }
 
