@@ -2022,8 +2022,9 @@ var uncheckedItemArrayUpdated = new Array();
 
 function filterCheckedUncheckCatgUrl(){
 	
-     
-	  
+     checkedItemsArray = new Array();
+	 uncheckItemArray = new Array();
+ 
 	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
