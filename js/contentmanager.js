@@ -3264,6 +3264,7 @@ $("#change_contents").hide();
 $("#start_copying_button").hide();
 
 $("#cmdu").show();
+$("#cmdu").text("Manage Categories");
 $("#src_place").hide();
 $("#start_copying_button").hide();
 $("#change_contents").hide();
