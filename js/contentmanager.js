@@ -3267,8 +3267,13 @@ $("#src_place").hide();
 $("#start_copying_button").hide();
 $("#change_contents").hide();
 $("#button_div").hide();
+$("#button_div").hide();
 $("#cat_place").hide();
+$("#cat_sel").hide();
+$("#selCat").hide();
 $("#cat_select_items_button").hide();
+$("#selected_items").show();
+
 $("#catTo").text("Updating Catagories this:");
 
 if(browserName=="MSIE")
@@ -3285,7 +3290,7 @@ else
 {
 var iframe = '<iframe id="frame1" src = "javascript:"&nbsp;" style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
-$("#copyTo").text("Updating this:");
+$("#catTo").text("Updating this:");
 }
 
 
