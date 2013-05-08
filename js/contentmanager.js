@@ -3255,13 +3255,6 @@ if(sel_action_val=="categs"){
 	//alert("catagory selectionn....");
 	
 
-
-	$("#selection_menu").hide();
-$("#stylized").show();
-$("#change_selection_div").hide();
-$("#change_contents").hide();
-$("#start_copying_button").hide();
-
 $("#cmdu").show();
 $("#src_place").hide();
 $("#start_copying_button").hide();
