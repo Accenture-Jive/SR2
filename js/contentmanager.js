@@ -2340,7 +2340,7 @@ if(catIndex < uncheckItemArray.length) {
 else {
 	console.log("Category "+selected_cat+" succesfully updated");
 		alert("Category "+selected_cat+" succesfully updated");
-		var temRedirectionUrl = to_place_blog_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
+		var temRedirectionUrl = redirection_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
 		alert("temRedirectionUrl = "+temRedirectionUrl);
 		$("#stylized").fadeOut(5000,function(){
 		window.location = window.location = temRedirectionUrl;
