@@ -2,6 +2,7 @@ var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
 var catIndex = 0;
+var catRedirectUrl='';
 
 var addId=new Array();
 var arrayIndex=0;
@@ -2340,12 +2341,12 @@ if(catIndex < uncheckItemArray.length) {
 else {
 	console.log("Category "+selected_cat+" succesfully updated");
 		alert("Category "+selected_cat+" succesfully updated");
-		var temRedirectionUrl = redirection_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
-		alert("redirection_url = "+redirection_url);
-		alert("temRedirectionUrl = "+temRedirectionUrl);
-		console.log("temRedirectionUrl = "+temRedirectionUrl);
+		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
+		alert("source_html_url = "+source_html_url);
+		alert("temRedirectionUrl = "+tempRedirectionUrl);
+		console.log("temRedirectionUrl = "+tempRedirectionUrl);
 		$("#stylized").fadeOut(5000,function(){
-		window.location = window.location = temRedirectionUrl;
+		window.location = window.location = tempRedirectionUrl;
 			});
 		
 }
