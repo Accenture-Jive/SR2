@@ -3325,8 +3325,13 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 		//alert("unchecked items : "+mainUncheckItems[index]);
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
+		
+		alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
-		filterCheckedUncheckCatgUrl1();
+	//	filterCheckedUncheckCatgUrl1();
 		
 		//alert("Category "+selected_cat+" updated");
 
