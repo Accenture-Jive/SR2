@@ -3259,13 +3259,18 @@ $("#change_selection_div").hide();
 $("#change_contents").hide();
 $("#start_copying_button").hide();
 
-$("#cmdu").show();
-$("#src_place").hide();
-$("#start_copying_button").hide();
-$("#change_contents").hide();
-$("#button_div").hide();
-$("#del_place").hide();
-$("#deleteTo").text("Deleting this:");
+if(browserName=="MSIE")
+{
+var finalurl=redirection_url+'/content';
+document.getElementById("ieSpan").innerHTML = 'The selected contents are being moved. The moved contents will appear here in a short while: <a href='+finalurl+'>'+dest_space_name+' - Contents</a>';
+}
+else
+{
+document.getElementById("frame1").contentDocument.body.style.fontFamily="Tahoma";	
+document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
+document.getElementById("frame1").contentDocument.body.style.color='Grey';
+document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progress.<br>Please leave this window open until the "+str+"process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
+}
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
