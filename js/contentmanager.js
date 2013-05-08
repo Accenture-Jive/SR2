@@ -2023,7 +2023,7 @@ var uncheckedItemArrayUpdated = new Array();
 function filterCheckedUncheckCatgUrl(){
 	
      
- 
+	  
 	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
@@ -2110,8 +2110,7 @@ function filterCheckedUncheckCatgUrl(){
 		
 	function filterCheckedUncheckCatgUrl1(){
 	
-     checkedItemsArray = new Array();
-	 uncheckItemArray = new Array();
+     
 	  
 	//  alert("hi filter");
 	  var checkedIndex = 0;
@@ -2120,15 +2119,15 @@ function filterCheckedUncheckCatgUrl(){
         $(':checkbox').each(function(i){
 			
 		 val[i] = $(this).val();
-		 alert(val[i]);
+		 //alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
-		 alert("true");
+		 //alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
-				 alert("false");
+				// alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
@@ -2138,7 +2137,7 @@ function filterCheckedUncheckCatgUrl(){
 	    });
 		
 		catIndex=0;
-		//updateCategoriesForNewContents1();
+		updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 
 		
@@ -3495,10 +3494,7 @@ document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
 document.getElementById("frame1").contentDocument.body.style.color='Grey';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Updating categories is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Updating content'.fontcolor("#3778C7")+"</span>";
 }
-
-		//***********************************
-		filterCheckedUncheckCatgUrl1();
-			for(var index=0; index < mainCheckedItems.length;index++) {
+	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
 		}
@@ -3512,6 +3508,8 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
 		alert("mainUncheckItems.length = "+mainUncheckItems.length);
 		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//***********************************
+		filterCheckedUncheckCatgUrl1();
 		
 	
 		catIndex = 0;
