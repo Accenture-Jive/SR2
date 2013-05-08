@@ -3267,8 +3267,9 @@ $("#src_place").hide();
 $("#start_copying_button").hide();
 $("#change_contents").hide();
 $("#button_div").hide();
-$("#del_place").hide();
-$("#deleteTo").text("Updating Catagories this:");
+$("#cat_place").hide();
+$("#cat_select_items_button").hide();
+$("#catTo").text("Updating Catagories this:");
 
 if(browserName=="MSIE")
 {
