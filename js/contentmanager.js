@@ -5,7 +5,7 @@ var catIndex = 0;
 
 var addId=new Array();
 var arrayIndex=0;
-var browserName='';categSel
+var browserName='';
 var loggedUser='';
 var loggedUserName='';
 
@@ -3275,7 +3275,7 @@ $("#cat_select_items_button").hide();
 $("#selected_items").show();
 
 $("#catTo").text("Updating Catagories this:");
-
+alert("browserName = "+browserName);
 if(browserName=="MSIE")
 {
 var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
