@@ -2120,15 +2120,15 @@ function filterCheckedUncheckCatgUrl(){
         $(':checkbox').each(function(i){
 			
 		 val[i] = $(this).val();
-		 //alert(val[i]);
+		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
-		 //alert("true");
+		 alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
-				// alert("false");
+				 alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
@@ -3265,12 +3265,9 @@ var all_selected='';
 
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
-if(sel_action_val=="categs")
-{
 	
-		startUpdatingCategories();
-}
-else {
+//		startUpdatingCategories();
+
 
 all_selected='';
 Grp_file_json='';
@@ -3441,7 +3438,7 @@ all_selected='<table name="all_selected_items" id="all_selected_items" border="0
 document.getElementById("start_copying_button").disabled = true;
 document.getElementById("selected_items").innerHTML=all_selected;
 }
-}
+
 };
 
 function startUpdatingCategories() {
