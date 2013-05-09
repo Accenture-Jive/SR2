@@ -2116,7 +2116,7 @@ function filterCheckedUncheckCatgUrl(){
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
-        $(':checkbox').each(function(i){
+        $('#filesTable input[type=checkbox]').each(function(i){
 			
 		 val[i] = $(this).val();
 		 //alert(val[i]);
@@ -2137,7 +2137,7 @@ function filterCheckedUncheckCatgUrl(){
 	    });
 		
 		catIndex=0;
-		updateCategoriesForNewContents1();
+		//updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 
 		
@@ -3494,6 +3494,7 @@ document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
 document.getElementById("frame1").contentDocument.body.style.color='Grey';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Updating categories is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Updating content'.fontcolor("#3778C7")+"</span>";
 }
+		filterCheckedUncheckCatgUrl1();
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
 			console.log("checked items : "+mainCheckedItems[index]);
@@ -3509,7 +3510,7 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 		alert("mainUncheckItems.length = "+mainUncheckItems.length);
 		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
-		filterCheckedUncheckCatgUrl1();
+
 		
 	
 		catIndex = 0;
