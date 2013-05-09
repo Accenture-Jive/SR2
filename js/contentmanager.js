@@ -2135,7 +2135,10 @@ function filterCheckedUncheckCatgUrl(){
 		
 	
 	    });
-		
+		alert("uncheckItemArray.length = "+uncheckItemArray.length);
+		console.log("uncheckItemArray.length = "+uncheckItemArray.length);
+		alert("uncheckItemArray.length = "+uncheckItemArray.length);
+		console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 		catIndex=0;
 		//updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
