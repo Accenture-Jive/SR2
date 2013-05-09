@@ -1,3 +1,4 @@
+alert("sdfsdsdsd");
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
