@@ -3264,6 +3264,8 @@ var all_selected='';
 
 function goBack(){
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
+alert("sadadadadaddaddad");
+
 if(sel_action_val=="categs")
 {
 	
