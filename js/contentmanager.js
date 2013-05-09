@@ -1,5 +1,4 @@
-alert("sdzdsaddsadad");
-
+alert("zxzxzcxzczczczczcadada");
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
@@ -2138,10 +2137,7 @@ function filterCheckedUncheckCatgUrl(){
 	
 	    });
 		
-		alert("mainCheckedItems.lengthssssss = "+checkedItemsArray.length);
-		console.log("mainCheckedItems.lengthssss = "+checkedItemsArray.length);
-		alert("mainUncheckItems.lengthssss = "+uncheckItemArray.length);
-		console.log("mainUncheckItems.length sss= "+uncheckItemArray.length);
+		
 		catIndex=0;
 		//updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
