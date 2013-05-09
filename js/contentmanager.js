@@ -2113,10 +2113,13 @@ function filterCheckedUncheckCatgUrl(){
      
 	  
 	  alert("hi filter");
+	  var contentTypeCheckBoxId = new Array();
+	  contentTypeCheckBoxId[0] = '#filesTable input[type=checkbox]';
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
-        $('#filesTable input[type=checkbox]').each(function(i){
+        //$('#filesTable input[type=checkbox]').each(function(i){
+		$(contentTypeCheckBoxId[0]).each(function(i){
 			
 		 val[i] = $(this).val();
 		 alert(val[i]);
