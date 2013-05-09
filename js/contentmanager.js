@@ -2112,22 +2112,22 @@ function filterCheckedUncheckCatgUrl(){
 	
      
 	  
-	//  alert("hi filter");
+	  alert("hi filter,,,,,");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
         $('#filesTable input[type=checkbox]').each(function(i){
 			
 		 val[i] = $(this).val();
-		 //alert(val[i]);
+		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
-		 //alert("true");
+		 alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
-				// alert("false");
+				alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
