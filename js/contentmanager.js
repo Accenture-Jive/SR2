@@ -3444,7 +3444,7 @@ document.getElementById("selected_items").innerHTML=all_selected;
 };
 
 function startUpdatingCategories() {
-	//alert("catagory selectionn....");
+	alert("catagory selectionn....");
 	//alert("browserName = "+browserName);
 
 
