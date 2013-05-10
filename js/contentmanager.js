@@ -1,4 +1,4 @@
-//alert("here ,,zcxzcxmcmc");
+
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
@@ -2134,12 +2134,12 @@ function filterCheckedUncheckCatgUrl(){
 		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
-		 alert("true");
+		 //alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
-				 alert("false");
+				// alert("false");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
@@ -2154,7 +2154,7 @@ function filterCheckedUncheckCatgUrl(){
 		alert("uncheckItemArray.length = "+uncheckItemArray.length);
 		console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 		catIndex=0;
-		//updateCategoriesForNewContents1();
+		updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
 
 		
