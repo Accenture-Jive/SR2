@@ -2295,7 +2295,7 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
 				if (catUpdateResponse.error){
-				errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.ref;
+				errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
 				referenceCatArrayIndex++;
 				
 				}
@@ -2360,7 +2360,7 @@ if(catIndex < uncheckItemArray.length) {
 				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
 
 					if (catUpdateResponse.error){
-				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.ref;
+				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
 				deReferenceCatArrayIndex++;
 				
 				}
