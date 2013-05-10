@@ -2131,7 +2131,7 @@ function filterCheckedUncheckCatgUrl(){
 		$(contentTypeCheckBoxIdArray[index]).each(function(i){
 			
 		 val[i] = $(this).val();
-		 alert(val[i]);
+		// alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 //alert("true");
@@ -2439,7 +2439,7 @@ postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
 // adding each file in a row as per the received response.
-alert("sdzdf");
+//alert("sdzdf");
 if (sel_action_val=='categs')
 {
 
@@ -2459,7 +2459,7 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-alert("Files catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
+//alert("Files catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
 
 
 var temp_id="file_cb"+index;
@@ -2508,7 +2508,7 @@ document.getElementById("files_div").innerHTML=files_row;
 function getBlogs(blog_url)
 {
 // getting the blogs from the selected space/group/project using the BLOG_URL.
-alert("get blogs");
+//alert("get blogs");
 osapi.jive.corev3.contents.get({
 type : 'post',
 fields : '@all',
@@ -2580,7 +2580,7 @@ if (categg2[ind]==selected_cat)
 console.log("categg2= "+categg2);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("blog_cb"+index).value);
-alert("Blogs catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
+//alert("Blogs catSelection = "+catSelection+" checkFlagItem = "+checkFlagItem);
 var temp_id="blog_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
