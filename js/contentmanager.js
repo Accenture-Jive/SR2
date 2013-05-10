@@ -2126,8 +2126,9 @@ function filterCheckedUncheckCatgUrl(){
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
+		for(index =0;index <  contentTypeCheckBoxIdArray.length;index++) {
         //$('#filesTable input[type=checkbox]').each(function(i){
-		$('#filesTable input[type=checkbox]').each(function(i){
+		$(contentTypeCheckBoxIdArray[index]).each(function(i){
 			
 		 val[i] = $(this).val();
 		 alert(val[i]);
@@ -2146,6 +2147,8 @@ function filterCheckedUncheckCatgUrl(){
 		
 	
 	    });
+		
+		}
 		alert("checkedItemsArray.length = "+checkedItemsArray.length);
 		console.log("checkedItemsArray.length = "+checkedItemsArray.length);
 		alert("uncheckItemArray.length = "+uncheckItemArray.length);
