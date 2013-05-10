@@ -2294,7 +2294,7 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
-				if (response.error){
+				if (catUpdateResponse.error){
 				errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.ref;
 				referenceCatArrayIndex++;
 				
@@ -2381,6 +2381,13 @@ else {
 		window.location = window.location = tempRedirectionUrl;
 			});*/
 			
+		for(var index = 0;index < errorReferenceCatArray.length;index++) {
+			console.log("Could Not Reference "+errorReferenceCatArray[index]);
+		}	
+
+		for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
+			console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
+		}	
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
 		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
