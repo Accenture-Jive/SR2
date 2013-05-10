@@ -3521,10 +3521,10 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 			console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		
-		alert("mainCheckedItems.length = "+mainCheckedItems.length);
-		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
-		alert("mainUncheckItems.length = "+mainUncheckItems.length);
-		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		//console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		//alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		//console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
