@@ -1,3 +1,4 @@
+alert("here ,,zcxzcxmcmc");
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var catSelection = false;
@@ -2111,15 +2112,15 @@ function filterCheckedUncheckCatgUrl(){
 	function filterCheckedUncheckCatgUrl1(){
 	
      
-	  
+	  var contentTypeCheckBoxIdArray = new Array()
 	  alert("hi filter");
 	  var contentTypeCheckBoxId = new Array();
-	  contentTypeCheckBoxId[0] = '#filesTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
         //$('#filesTable input[type=checkbox]').each(function(i){
-		$(contentTypeCheckBoxId[0]).each(function(i){
+		$('#filesTable input[type=checkbox]').each(function(i){
 			
 		 val[i] = $(this).val();
 		 alert(val[i]);
