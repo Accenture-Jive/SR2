@@ -2116,29 +2116,39 @@ function filterCheckedUncheckCatgUrl(){
 	  alert("hi filter");
 	  var contentTypeCheckBoxId = new Array();
 	  contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[2] = '#ideaTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[3] = '#pollTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[4] = '#blogTable input[type=checkbox]';
+	  contentTypeCheckBoxIdArray[5] = '#discTable input[type=checkbox]';
+
+
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
+		for(index =0;index <  contentTypeCheckBoxIdArray.length;index++) {
         //$('#filesTable input[type=checkbox]').each(function(i){
-		$('#filesTable input[type=checkbox]').each(function(i){
+		$(contentTypeCheckBoxIdArray[index]).each(function(i){
 			
-		 val[i] = $(this).val();
+		 val[i] = $(contentTypeCheckBoxIdArray[index]).val();
 		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 alert("true");
-			checkedItemsArray[checkedIndex] = $(this).val();
+			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			checkedIndex++;
 		 }
 		 else {
 				 alert("false");
-			uncheckItemArray[uncheckedIndex] = $(this).val();
+			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			uncheckedIndex++;
 		}
 		}
 		
 	
 	    });
+		
+		}
 		alert("checkedItemsArray.length = "+checkedItemsArray.length);
 		console.log("checkedItemsArray.length = "+checkedItemsArray.length);
 		alert("uncheckItemArray.length = "+uncheckItemArray.length);
