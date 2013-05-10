@@ -2364,6 +2364,17 @@ if(catIndex < uncheckItemArray.length) {
 				deReferenceCatArrayIndex++;
 				
 				}
+						if(catIndex >= uncheckItemArray.length) {
+
+						for(var index = 0;index < errorReferenceCatArray.length;index++) {
+							console.log("Could Not Reference "+errorReferenceCatArray[index]);
+						}	
+
+						for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
+							console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
+						}	
+						}
+				
 				});
 				catIndex++;
 				removeCategoriesForContents();
