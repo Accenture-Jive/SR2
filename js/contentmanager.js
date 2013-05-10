@@ -2358,7 +2358,12 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+
+					if (catUpdateResponse.error){
+				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.ref;
+				deReferenceCatArrayIndex++;
 				
+				}
 				});
 				catIndex++;
 				removeCategoriesForContents();
@@ -2375,13 +2380,6 @@ else {
 		/*$("#stylized").fadeOut(5000,function(){
 		window.location = window.location = tempRedirectionUrl;
 			});*/
-		for(int index=0;index<errorReferenceCatArray.length;index++) {
-			console.log("Could not De-reference "+errorReferenceCatArray[index]);
-		}
-		
-		for(int index=0;index<errorDeReferenceCatArray.length;index++) {
-			console.log("Could not reference "+errorReferenceCatArray[index]);
-		}
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
 		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
