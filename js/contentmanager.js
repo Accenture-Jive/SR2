@@ -2358,11 +2358,7 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
-				if (response.error){
-				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.ref;
-				deReferenceCatArrayIndex++;
 				
-				}
 				});
 				catIndex++;
 				removeCategoriesForContents();
