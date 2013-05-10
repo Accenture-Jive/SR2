@@ -2019,7 +2019,10 @@ var uncheckItemArray = new Array();
 var checkItemArrayUpdated = new Array();
 var uncheckedItemArrayUpdated = new Array();
 
- 
+var errorReferenceCatArray = new Array();
+var errorDeReferenceCatArray = new Array();
+var referenceCatArrayIndex =0;
+var deReferenceCatArrayIndex =0;
 
 function filterCheckedUncheckCatgUrl(){
 	
@@ -2227,6 +2230,7 @@ removeCategoriesForContents();
 
 }
 
+
 function updateCategoriesForNewContents1() {
 	//alert("Into the updateCategories for new contents");
 	console.log("Into the updateCategories for new contents");
@@ -2247,6 +2251,7 @@ if(catIndex < checkedItemsArray.length) {
 	var contentURL = checkedItemsArray[catIndex];
 	var toUpdateCategories;
 	var toCategoriesArray;
+	var toUpdateHtmlUrl;
 	var updatedCategoryList = new Array();
 	var isCategoryExisting =false;
 	
@@ -2289,6 +2294,11 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
+				if (response.error){
+				errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.ref;
+				referenceCatArrayIndex++;
+				
+				}
 				console.log("updated --"+JSON.stringify(catUpdateResponse));
 				
 				});
@@ -2348,6 +2358,11 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+				if (response.error){
+				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.ref;
+				deReferenceCatArrayIndex++;
+				
+				}
 				});
 				catIndex++;
 				removeCategoriesForContents();
@@ -2364,6 +2379,13 @@ else {
 		/*$("#stylized").fadeOut(5000,function(){
 		window.location = window.location = tempRedirectionUrl;
 			});*/
+		for(int index=0;index<errorReferenceCatArray.length;index++) {
+			console.log("Could not De-reference "+errorReferenceCatArray[index]);
+		}
+		
+		for(int index=0;index<errorDeReferenceCatArray.length;index++) {
+			console.log("Could not reference "+errorReferenceCatArray[index]);
+		}
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
 		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
