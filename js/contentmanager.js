@@ -2126,29 +2126,26 @@ function filterCheckedUncheckCatgUrl(){
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
-		for(index =0;index <  contentTypeCheckBoxIdArray.length;index++) {
         //$('#filesTable input[type=checkbox]').each(function(i){
-		$(contentTypeCheckBoxIdArray[index]).each(function(i){
+		$('#filesTable input[type=checkbox]').each(function(i){
 			
-		 val[i] = $(contentTypeCheckBoxIdArray[index]).val();
+		 val[i] = $(this).val();
 		 alert(val[i]);
 		 if(val[i] != 'on'){
 		 if($(this).is(':checked')){
 		 alert("true");
-			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
+			checkedItemsArray[checkedIndex] = $(this).val();
 			checkedIndex++;
 		 }
 		 else {
 				 alert("false");
-			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
+			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
 		}
 		
 	
 	    });
-		
-		}
 		alert("checkedItemsArray.length = "+checkedItemsArray.length);
 		console.log("checkedItemsArray.length = "+checkedItemsArray.length);
 		alert("uncheckItemArray.length = "+uncheckItemArray.length);
