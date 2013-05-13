@@ -552,6 +552,7 @@ $("#tag_select_items_button").hide();
 document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#tagFrom").show();
+$("#cat_place").hide();
 $("#del_place").css("margin-top", "110px");
 $('#tag_place').css("margin-top", "110px");
 $("#dwnFrom").hide();
