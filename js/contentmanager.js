@@ -1426,7 +1426,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "135px");
+$('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
