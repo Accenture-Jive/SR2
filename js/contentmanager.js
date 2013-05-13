@@ -519,6 +519,7 @@ $("#del_select_items_button").hide();
 $("#up_select_items_button").hide();
 $("#copyTo").hide();
 $("#up_place").hide();
+$("#cat_place").hide();
 $("#delShow").hide();
 $("#tagShow").hide();
 $("#upShow").hide();
