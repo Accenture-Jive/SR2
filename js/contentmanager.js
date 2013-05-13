@@ -482,6 +482,7 @@ $('#start_copying_button').val('Start Downloading');
 $('#start_copying_button').unbind('click').click(function(){startDownloading();});
 }
 else if(sel_action_val=="categs"){
+alert("Comming here...");
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
@@ -1135,7 +1136,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "135px");
+$('#cat_place').css("margin-top", "130px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
