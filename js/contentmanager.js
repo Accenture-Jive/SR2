@@ -454,6 +454,7 @@ $("#del_select_items_button").hide();
 $("#up_select_items_button").hide();
 $("#copyTo").hide();
 $("#up_place").hide();
+$("#tag_place").hide();
 $("#dwn_select_items_button").hide();
 $("#deleteTo").hide();
 $("#delShow").hide();
@@ -471,6 +472,7 @@ document.getElementById("upFrom").style.display="inline";
 
 $('#dwnFrom').show();
 $('#upFrom').hide();
+$('#tagFrom').hide();
 $('#from_label').hide();
 $('#to_label').hide();
 $('#to_place').hide();
