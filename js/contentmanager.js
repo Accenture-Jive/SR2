@@ -570,6 +570,7 @@ $("#dwn_place").hide();
 $("#dwnTo").hide();
 $("#cmdu").text("Delete");
 $("#dwn_select_items_button").hide();
+$("#cat_select_items_button").hide();
 $("#dwnFrom").hide();
 $("#tab_items").show();
 $('#all_selected_items').css("margin-top", "80px");
