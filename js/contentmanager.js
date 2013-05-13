@@ -656,7 +656,7 @@ $("#upShow").hide();
 $("#up_place").hide();
 $('#select_items_button').hide();
 }
-}*/
+}
 
 function fromPlace()
 {
