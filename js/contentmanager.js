@@ -1167,7 +1167,7 @@ document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
 $("#cat_select_items_button").hide();
 
-$("#tag_from_space").show();
+$("#tag_from_space").hide();
 $("#cat_sel").show();
 $("#selCat").show();
 $("#up_select_items_button").hide();
