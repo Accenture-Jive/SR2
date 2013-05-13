@@ -951,7 +951,7 @@ else
 $("#tag_select_items_button").show();
 $("#tagTo").show();
 $("#add_tag_button").hide();
-$("#tag_sel").hide();
+$("#tag_sel").show();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
 getDocs(space_url);
