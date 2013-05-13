@@ -462,6 +462,7 @@ $("#upShow").hide();
 $("#upTo").hide();
 $("#del_from_space").hide();
 $("#del_from_group").hide();
+$("#tag_place").hide();
 $("#del_from_project").hide();
 $("#up_from_space").hide();
 $("#up_from_group").hide();
