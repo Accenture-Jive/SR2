@@ -497,19 +497,13 @@ $("#del_place").css("margin-top", "110px");
 $('#cat_place').css("margin-top", "135px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
-$("#selTag").hide();
 $("#dwn_from_space").hide();
 $("#dwn_from_group").hide();
-$("#tag_from_space").hide();
 $("#dwn_from_project").hide();
-$("#add_tag").hide();
-$("#tagTo").hide();
-$("#add_tag").hide();
 $("#dwn_place").hide();
 $("#dwnTo").hide();
 $("#cmdu").text("Delete");
 $("#dwn_select_items_button").hide();
-$("#tag_select_items_button").hide();
 $("#dwnFrom").hide();
 $("#tab_items").show();
 $('#all_selected_items').css("margin-top", "80px");
@@ -559,9 +553,6 @@ $("#tag_select_items_button").hide();
 document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#cat_place").hide();
-$("#cat_from_space").hide();
-$("#selCat").hide();
-$("#cat_sel").hide();
 
 $("#tagFrom").show();
 $("#del_place").css("margin-top", "110px");
@@ -575,7 +566,6 @@ $("#dwn_place").hide();
 $("#dwnTo").hide();
 $("#cmdu").text("Delete");
 $("#dwn_select_items_button").hide();
-$("#cat_select_items_button").hide();
 $("#dwnFrom").hide();
 $("#tab_items").show();
 $('#all_selected_items').css("margin-top", "80px");
@@ -1072,18 +1062,6 @@ $('#dwn_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 
 //changing the default dropdown selection to 'Change Place'
 $("#cat_place option").each(function() {
-if($(this).text() == 'Select Place') {
-$(this).attr('selected', 'selected'); 
-$('#cat_place :selected').text('Change Place');	
-}
-else if($(this).text() == 'Change Place')
-{  
-$('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
-}
-});
-
-//changing the default dropdown selection to 'Change Place'
-$("#tag_place option").each(function() {
 if($(this).text() == 'Select Place') {
 $(this).attr('selected', 'selected'); 
 $('#cat_place :selected').text('Change Place');	
@@ -4490,7 +4468,7 @@ else
 {
 var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
-$("#tagTo").text("Updating Tags");
+$("#tagTo").text("Updating this:");
 }
 
 if(browserName=="MSIE")
