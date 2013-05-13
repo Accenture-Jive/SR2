@@ -519,6 +519,7 @@ $("#copyTo").hide();
 $("#up_place").hide();
 $("#delShow").hide();
 $("#tagShow").hide();
+$("#tag_place").hide();
 $("#upShow").hide();
 $("#upTo").hide();
 $("#del_from_space").hide();
