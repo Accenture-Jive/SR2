@@ -251,17 +251,17 @@ style="display:none;margin-left:-80px;position:absolute; margin-top:195px;width:
 </div>
 
 <div id="tagShow">
-<label id ="tagFrom" style="display:none;margin-left:210px;position:absolute; margin-top:62px;"><br/>Manage Tags In:</label>
+<label id ="tagFrom" style="display:none;margin-left:225px;position:absolute; margin-top:80px;"><br/>Manage Tags In:</label>
 <tr>
 <tr>
-<label id="tag_from_space" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:110px;font-weight:normal;text-align:center;display:none;">Manage Tags in Space</label>
-<label id="tag_from_group" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:110px;font-weight:normal;text-align:center;display:none;">Manage Tags in Group</label>
-<label id="tag_from_project" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:110px;font-weight:normal;text-align:center;display:none;">Manage Tags in Project</label>
+<label id="tag_from_space" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:120px;font-weight:normal;text-align:center;display:none;">Manage Tags in Space</label>
+<label id="tag_from_group" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:120px;font-weight:normal;text-align:center;display:none;">Manage Tags in Group</label>
+<label id="tag_from_project" class="xlabel" style="width:250px;height:33px;margin-left:175px;position:absolute; margin-top:120px;font-weight:normal;text-align:center;display:none;">Manage Tags in Project</label>
 </tr>
 <td>
 <br/>
 <select name="tag_place" id="tag_place" onchange="javascript:tagFromPlace();" 
-style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
+style="display:none;margin-left:-65px;position:absolute; margin-top:110px;">
 <option value="select_one">Select Place</option>
 <option value="select_space">Select Space</option>
 <option value="select_group">Select Group</option>
@@ -270,10 +270,21 @@ style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
 </td>
 </tr>
 <tr>
-<span id ="tagTo" style="display:none;margin-left:-70px;font-weight:bold;position:absolute; margin-top:165px;"></span>
+<tr>
+<label id ="selTag" style="display:none;margin-left:205px;position:absolute; margin-top:160px;"><br/>Enter Tag:</label>
+</tr>
+<td>
+<br/>
+<input type="text" name="tag_sel" id="tag_sel" style="display:none;margin-left:-75px;position:absolute; margin-top:185px;width:120px;">
+<input type="button" id="add_tag_button" value="OK" name="add_tag_button" style="display:none;margin-left:60px;position:absolute; margin-top:185px;" onclick="javascript:tagSel();"/>
+<label id="add_tag" style="display:none;text-align:center;margin-left:250px;position:absolute; margin-top:185px;width:120px;">Copy From Space</label>
+</td>
 </tr>
 <tr>
-<input type="button" id="tag_select_items_button" value="Select Contents" name="select_items" style="display:none;margin-left:-86px;font-weight:bold;position:absolute; margin-top:190px;" onclick="javascript:showTab();javascript:highlightTab();"/>
+<span id ="tagTo" style="display:none;margin-left:235px;font-weight:bold;position:absolute; margin-top:220px;"></span>
+</tr>
+<tr>
+<input type="button" id="tag_select_items_button" value="Select Contents" name="select_items" style="display:none;margin-left:255px;font-weight:bold;position:absolute; margin-top:250px;" onclick="javascript:showTab();javascript:highlightTab();"/>
 </tr>
 <tr>
 </tr>
