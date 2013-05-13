@@ -108,7 +108,7 @@ function selected_action()
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
 sel_action_val = sel_action.options[sel_action.selectedIndex].value;
-
+alert("sel_action_val = "+sel_action_val);
 var dialog_obj3 = $("#uploadIE");
 dialog_obj3.dialog("close");
 
@@ -482,7 +482,6 @@ $('#start_copying_button').val('Start Downloading');
 $('#start_copying_button').unbind('click').click(function(){startDownloading();});
 }
 else if(sel_action_val=="categs"){
-alert("Comming here...");
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
