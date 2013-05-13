@@ -102,7 +102,7 @@ loggedUserName=response.name.formatted;
 
 }
 
-function selected_action()
+/*function selected_action()
 {
 // Check which action is selected by user copy/move/delete/upload/download &
 // hide show elements accordingly.
@@ -272,7 +272,7 @@ document.getElementById("del_place").style.display="inline";
 document.getElementById("del_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 document.getElementById("up_place").style.display="inline";
-$("#del_place").css("margin-top", "170px");
+$("#del_place").css("margin-top", "110px");
 $("#del_select_items_button").hide();
 $("#up_select_items_button").hide();
 $("#copyTo").hide();
@@ -656,7 +656,370 @@ $("#upShow").hide();
 $("#up_place").hide();
 $('#select_items_button').hide();
 }
+}*/
+function selected_action()
+{
+// Check which action is selected by user copy/move/delete/upload/download &
+// hide show elements accordingly.
+var sel_action = document.getElementById("src_place");
+sel_action_val = sel_action.options[sel_action.selectedIndex].value;
+
+var dialog_obj3 = $("#uploadIE");
+dialog_obj3.dialog("close");
+
+if(sel_action_val=="copy"){
+
+src_space_name='';
+dest_space_name='';
+$("#cmdu").text("Copy");
+$("#to_space").hide();
+$("#tab_items").show();
+$("#dwnFrom").hide();
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#dwn_select_items_button").hide();
+$("#to_group").hide();
+$("#to_project").hide();
+$("#from_space").hide();
+$("#from_group").hide();
+$("#from_project").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+$("#deleteFrom").hide();
+$("#upFrom").hide();
+$('#all_selected_items').css("margin-top", "0px");
+$('#selected_items').css("margin-top", "0px");
+document.getElementById("deleteTo").style.display="inline";
+$("#deleteTo").hide();
+$("#upTo").hide();
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+document.getElementById("copyTo").style.visibility="hidden";
+document.getElementById("del_place").style.display="inline";
+document.getElementById("up_place").style.display="inline";
+$("#del_place").hide();
+$("#up_place").hide();
+$("#change_selection_div").hide();
+$("#stylized").show();
+$("#showDiv").show();
+$("#to_place").show();
+document.getElementById("to_place").disabled = true;
+$("#copyTo").show();
+$('#from_label').text("Copy From:");
+$('#to_label').text("Copy To:");
+$('#from_label').show();
+$('#to_label').show();
+$('#select_items_button').hide();
+
+$("#copyTo").text("Copy this:").append('<br/>');
+$('#start_copying_button').val('Start Copying');
+$('#start_copying_button').unbind('click').click(function(){startCopying();});		
 }
+else if(sel_action_val=="move"){
+document.getElementById("to_place").disabled = true;
+src_space_name='';
+dest_space_name='';
+$("#cmdu").text("Move");
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwn_select_items_button").hide();
+$("#dwnTo").hide();
+$('#all_selected_items').css("margin-top", "0px");
+$('#selected_items').css("margin-top", "0px");
+$("#to_space").hide();
+$("#tab_items").show();
+$("#to_group").hide();
+$("#dwnFrom").hide();
+$("#to_project").hide();
+$("#from_space").hide();
+$("#from_group").hide();
+$("#from_project").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#deleteFrom").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+$("#upFrom").hide();
+document.getElementById("deleteTo").style.display="inline";
+document.getElementById("upTo").style.display="inline";
+$("#deleteTo").hide();
+$("#upTo").hide();
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+document.getElementById("copyTo").style.visibility="hidden";
+document.getElementById("del_place").style.display="inline";
+document.getElementById("up_place").style.display="inline";
+$("#del_place").hide();
+$("#up_place").hide();
+$("#change_selection_div").hide();
+$("#stylized").show();
+$("#showDiv").show();
+$("#to_place").show();
+$("#copyTo").show();
+$('#from_label').text("Move From:");
+$('#to_label').text("Move To:");
+$('#from_label').show();
+$('#to_label').show();
+$('#select_items_button').hide();
+$("#copyTo").text("Move this:").append('<br/>');
+$('#start_copying_button').val('Start Moving');
+$('#start_copying_button').unbind('click').click(function(){startMoving();});
+}
+else if(sel_action_val=="delete"){
+src_space_name='';
+dest_space_name='';
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#cmdu").text("Delete");
+$("#dwn_select_items_button").hide();
+$("#dwnFrom").hide();
+$("#tab_items").show();
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#change_selection_div").hide();
+$("#showDiv").hide();
+document.getElementById("del_place").style.display="inline";
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+document.getElementById("up_place").style.display="inline";
+$("#del_place").css("margin-top", "110px");
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#copyTo").hide();
+$("#up_place").hide();
+$("#delShow").show();
+$("#upShow").hide();
+$("#upTo").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+document.getElementById("deleteFrom").style.display="inline";
+document.getElementById("upFrom").style.display="inline";
+$('#upFrom').hide();
+$('#from_label').hide();
+$('#to_label').hide();
+$('#to_place').hide();
+$("#to_space").hide();
+$("#to_group").hide();
+$("#to_project").hide();
+$('#select_items_button').hide();	
+$('#start_copying_button').val('Start Deleting');
+$('#start_copying_button').unbind('click').click(function(){startDeleting();});
+}
+else if(sel_action_val=="uploadd"){
+if(browserName=="MSIE")
+{
+
+src_space_name='';
+dest_space_name='';
+$("#cmdu").text("Upload");
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#dwn_select_items_button").hide();
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#change_selection_div").hide();
+$("#showDiv").hide();
+$("#deleteFrom").hide();
+$("#dwnFrom").hide();
+document.getElementById("deleteTo").style.display="inline";
+$("#deleteTo").hide();
+document.getElementById("up_place").style.display="inline";
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#del_place").hide();
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#copyTo").hide();
+$("#delShow").hide();
+$("#upShow").hide();
+$("#up_place").hide();
+$('#up_place').css("margin-top", "90px");
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+document.getElementById("upFrom").style.display="inline";
+$('#from_label').hide();
+$('#to_label').hide();
+$('#to_place').hide();
+$("#to_space").hide();
+$("#to_group").hide();
+$("#to_project").hide();	
+$('#select_items_button').hide();
+
+$("#uploadIE").show();
+$("#uploadIE").dialog();
+
+$("#src_place option").each(function() {
+if($(this).text() == 'Select Place') {
+$(this).attr('selected', 'selected'); 
+$('#src_place :selected').text('Change Place');	
+}
+else if($(this).text() == 'Change Place')
+{  
+$('#src_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
+}
+});
+
+}
+else
+{
+src_space_name='';
+dest_space_name='';
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#cmdu").text("Upload");
+$('#all_selected_items').css("margin-top", "80px");
+$("#dwnFrom").hide();
+$('#selected_items').css("margin-top", "80px");
+$("#change_selection_div").hide();
+$("#showDiv").hide();
+$("#deleteFrom").hide();
+document.getElementById("deleteTo").style.display="inline";
+$("#deleteTo").hide();
+document.getElementById("up_place").style.display="inline";
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#del_place").hide();
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#copyTo").hide();
+$("#delShow").hide();
+$("#upShow").show();
+$("#dwn_select_items_button").hide();
+$("#up_place").show();
+$('#up_place').css("margin-top", "90px");
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+document.getElementById("upFrom").style.display="inline";
+$('#from_label').hide();
+$('#to_label').hide();
+$('#to_place').hide();
+$("#to_space").hide();
+$("#to_group").hide();
+$("#to_project").hide();	
+$('#select_items_button').hide();
+}
+}
+else if(sel_action_val=="download"){
+src_space_name='';
+dest_space_name='';
+$("#cmdu").text("Download");
+$("#tab_items").hide();
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#change_selection_div").hide();
+$("#showDiv").hide();
+document.getElementById("del_place").style.display="inline";
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+document.getElementById("up_place").style.display="inline";
+$("#del_place").css("margin-top", "110px");
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#copyTo").hide();
+$("#up_place").hide();
+$("#dwn_select_items_button").hide();
+$("#deleteTo").hide();
+$("#delShow").hide();
+$("#dwnShow").show();
+$("#upShow").hide();
+$("#upTo").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+document.getElementById("deleteFrom").style.display="inline";
+document.getElementById("upFrom").style.display="inline";
+
+$('#dwnFrom').show();
+$('#upFrom').hide();
+$('#from_label').hide();
+$('#to_label').hide();
+$('#to_place').hide();
+$("#to_space").hide();
+$("#to_group").hide();
+$("#to_project").hide();
+$('#select_items_button').hide();	
+$('#start_copying_button').val('Start Downloading');
+$('#start_copying_button').unbind('click').click(function(){startDownloading();});
+}
+else if(sel_action_val=="select_action"){
+src_space_name='';
+dest_space_name='';
+
+document.getElementById("del_place").style.display="inline";
+$("#change_selection_div").hide();
+$("#dwn_from_space").hide();
+$("#dwn_select_items_button").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#dwnFrom").hide();
+$("#deleteFrom").hide();
+$("#upFrom").hide();
+document.getElementById("deleteTo").style.display="inline";
+document.getElementById("upTo").style.display="inline";
+$("#deleteTo").hide();
+$("#upTo").hide();
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+$("#showDiv").hide();
+$("#copyTo").hide();
+$("#delShow").hide();
+$("#del_place").hide();
+$("#upShow").hide();
+$("#up_place").hide();
+$('#select_items_button').hide();
+}
+}
+
+
 
 function fromPlace()
 {
