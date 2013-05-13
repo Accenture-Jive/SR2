@@ -2,6 +2,7 @@ var errorReferenceCatArray = new Array();
 var errorDeReferenceCatArray = new Array();
 var referenceCatArrayIndex =0;
 var deReferenceCatArrayIndex =0;
+var dotIndex = 0;
 
 //for categories
 var contentCheckedIndex =0;
@@ -2428,6 +2429,7 @@ function filterCheckedUncheckCatgUrl(){
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 		catIndex=0;
+		dotIndex=0;
 		updateCategoriesForNewContents1();		
 
 
@@ -2536,6 +2538,12 @@ if(catIndex < checkedItemsArray.length) {
 					//console.log(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
+				var str='Referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
+				for(index =0;index < dotIndex;index++) 
+					str = str +'.';
+				if(dotIndex == 3) dotIndex = 0;
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+
 				
 				var tempIndex =0;
 				for(var index=0;index < toUpdateCategories.length;index++,tempIndex++) {
@@ -2580,6 +2588,7 @@ if(catIndex < checkedItemsArray.length) {
 }
 else {
 catIndex = 0;
+dotIndex=0;
 removeCategoriesForContents();
 }
 
@@ -2607,6 +2616,11 @@ if(catIndex < uncheckItemArray.length) {
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
+				var str='Referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
+				for(index =0;index < dotIndex;index++) 
+					str = str +'.';
+				if(dotIndex == 3) dotIndex = 0;
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
 				//toCategoriesArray = toUpdateCategories.split(",");
