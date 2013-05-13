@@ -4375,7 +4375,7 @@ else
 {
 var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
-$("#catTo").text("Updating this:");
+$("#catTo").text("Updating Categories");
 }
 
 if(browserName=="MSIE")
