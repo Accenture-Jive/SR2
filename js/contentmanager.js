@@ -1075,6 +1075,18 @@ $('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 }
 });
 
+//changing the default dropdown selection to 'Change Place'
+$("#tag_place option").each(function() {
+if($(this).text() == 'Select Place') {
+$(this).attr('selected', 'selected'); 
+$('#cat_place :selected').text('Change Place');	
+}
+else if($(this).text() == 'Change Place')
+{  
+$('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
+}
+});
+
 // calling methods to fetch content.
 getDocs(space_url);
 getFiles(space_url);
