@@ -491,6 +491,7 @@ $("#deleteTo").hide();
 $("#cat_select_items_button").hide();
 document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
+$("#tag_place").hide();
 $("#catFrom").show();
 $("#del_place").css("margin-top", "110px");
 $('#cat_place').css("margin-top", "120px");
