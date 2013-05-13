@@ -4474,7 +4474,7 @@ $("#button_div").hide();
 $("#tag_place").hide();
 $("#tag_sel").hide();
 $("#selTag").show();
-$('#add_tag').css("margin-top", "130x");
+$('#add_tag').css("margin-top", "130px");
 
 $("#selTag").text = 'Selected tag';
 $("#tagTo").show();
