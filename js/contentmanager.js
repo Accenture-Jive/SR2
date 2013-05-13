@@ -553,6 +553,10 @@ $("#tag_select_items_button").hide();
 document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#cat_place").hide();
+$("#cat_from_space").hide();
+$("#selCat").hide();
+$("#cat_sel").hide();
+
 $("#tagFrom").show();
 $("#del_place").css("margin-top", "110px");
 $('#tag_place').css("margin-top", "110px");
@@ -2541,6 +2545,7 @@ if(catIndex < checkedItemsArray.length) {
 				var str='Referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
+					dotIndex++;
 				if(dotIndex == 3) dotIndex = 0;
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
@@ -2616,9 +2621,10 @@ if(catIndex < uncheckItemArray.length) {
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-				var str='Referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
+				var str='De-referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
+					dotIndex++;
 				if(dotIndex == 3) dotIndex = 0;
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
