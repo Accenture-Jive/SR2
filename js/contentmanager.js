@@ -919,7 +919,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
-$("#catTo").show();
+$("#catTo").hide();
 getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
