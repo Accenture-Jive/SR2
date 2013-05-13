@@ -953,11 +953,11 @@ $("#tagTo").hide();
 else
 {
 $("#tag_select_items_button").show();
-$("#tagTo").show();
+$("#tagTo").hide();
 $("#add_tag_button").hide();
 $("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
-$("#add_tag").hide();
+$("#add_tag").show();
 getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
