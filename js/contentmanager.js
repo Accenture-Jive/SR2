@@ -4473,7 +4473,10 @@ $("#change_contents").hide();
 $("#button_div").hide();
 $("#tag_place").hide();
 $("#tag_sel").hide();
-$("#selTag").hide();
+$("#selTag").show();
+$('#add_tag').css("margin-top", "130x");
+
+$("#selTag").text = 'Selected tag';
 $("#tagTo").show();
 $("#tag_select_items_button").hide();
 
@@ -4490,7 +4493,7 @@ else
 {
 var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
-$("#tagTo").text("Updating this:");
+$("#tagTo").text("Updating Tags");
 }
 
 if(browserName=="MSIE")
