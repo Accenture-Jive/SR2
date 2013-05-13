@@ -493,7 +493,7 @@ $("#cat_place").show();
 $("#tag_place").hide();
 $("#catFrom").show();
 $("#del_place").css("margin-top", "110px");
-$('#cat_place').css("margin-top", "120px");
+$('#cat_place').css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
