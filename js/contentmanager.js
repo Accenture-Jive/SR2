@@ -4381,6 +4381,7 @@ $("#button_div").hide();
 $("#cat_place").hide();
 $("#cat_sel").hide();
 $("#selCat").hide();
+$('#catTo').css("margin-top", "170px");
 $("#catTo").show();
 $("#cat_select_items_button").hide();
 
