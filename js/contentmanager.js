@@ -1229,7 +1229,7 @@ $("#tag_from_space").show();
 $("#tag_from_group").hide();
 $("#tag_from_project").hide();
 console.log('space_url = '+space_url);
-categoryTest();
+//categoryTest();
 }
 
 else if(sel_action_val=="select_action")
@@ -3138,7 +3138,7 @@ else {
 function getFiles(space_url)
 {
 // fetches the files from the selected space/group/project using the SPACE_URL.
-
+alert("comming here..");
 osapi.jive.corev3.contents.get({
 type : 'file',
 fields : '@all',
