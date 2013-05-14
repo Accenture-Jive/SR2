@@ -535,6 +535,7 @@ $("#up_from_group").hide();
 $("#up_from_project").hide();
 document.getElementById("deleteFrom").style.display="inline";
 document.getElementById("upFrom").style.display="inline";
+$('#cat_from_project').css("margin-left", "-70px");
 $('#upFrom').hide();
 $('#from_label').hide();
 $('#to_label').hide();
