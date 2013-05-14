@@ -989,6 +989,7 @@ function fromSpaceRequest() {
 var from_place_name='';
 src_space_name='';
 dest_space_name='';
+selected_cat = '';
 document.getElementById("to_place").disabled = false;
 document.getElementById("from_project").innerHTML=msg2;
 document.getElementById("from_group").innerHTML=msg2;
