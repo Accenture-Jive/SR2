@@ -560,6 +560,7 @@ $('#tag_place').css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
+$("#tag_from_space").hide();
 $("#dwn_from_group").hide();
 $("#dwn_from_project").hide();
 $("#dwn_place").hide();
