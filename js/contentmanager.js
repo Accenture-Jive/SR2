@@ -923,6 +923,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
+$('#catTo').css("margin-top", "225px");
 $("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
