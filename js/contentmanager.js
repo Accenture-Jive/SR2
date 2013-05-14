@@ -1155,6 +1155,9 @@ else if(sel_action_val=="categs")
 $('#cat_place').css("margin-top", "130px");
 $('#cat_place').css("margin-left", "-75px");
 $('#cat_sel').css("margin-left", "-75px");
+$("#cat_sel option").each(function() {
+	$(this).remove();
+   });
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Manage content for this category:").append('<br/>');
