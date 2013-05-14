@@ -1155,6 +1155,7 @@ else if(sel_action_val=="categs")
 $('#cat_place').css("margin-top", "130px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
+$('#cat_sel').css("margin-left", "-70px");
 $("#catTo").text("Manage content for this category:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
 $("#catTo").hide();
