@@ -2675,7 +2675,7 @@ else {
               console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
             }  
 			if(errorReferenceCatArray.length > 0 || errorDeReferenceCatArray.length>0) {
-				alert('Message:\\nYou have insufficient rights to update all the content selected.\\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\\nPlease contact your group or space admin to get the necessary rights.');
+				alert('Message:\nYou have insufficient rights to update all the content selected.\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\nPlease contact your group or space admin to get the necessary rights.');
 			}
 			else {
 
