@@ -1228,6 +1228,7 @@ $("#tag_place").css("margin-top", "140px");
 $("#tag_from_space").show();
 $("#tag_from_group").hide();
 $("#tag_from_project").hide();
+console.log('space_url = '+space_url);
 categoryTest();
 }
 
