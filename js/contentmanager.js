@@ -953,6 +953,7 @@ $("#tagTo").hide();
 else
 {
 $("#tag_select_items_button").show();
+$('#tagTo').css("margin-top", "225px");
 $("#tagTo").show();
 $("#add_tag_button").hide();
 $("#tag_sel").hide();
