@@ -2551,7 +2551,7 @@ if(catIndex < checkedItemsArray.length) {
 					//console.log(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-				var str='Referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
+				var str='Applying category '+selected_cat+' to '+contentCatResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
 					dotIndex++;
@@ -2630,7 +2630,7 @@ if(catIndex < uncheckItemArray.length) {
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentCatResponseObj.categories;
-				var str='De-referencing '+selected_cat+' to '+contentCatResponseObj.type+'';
+				var str='Removing category '+selected_cat+' to '+contentCatResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
 					dotIndex++;
@@ -2686,7 +2686,7 @@ else {
 			});*/
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
+		var str='Updating categories has completed. Please click   <a href=window.open('+tempRedirectionUrl+')>here </a>  to review the result.';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		
