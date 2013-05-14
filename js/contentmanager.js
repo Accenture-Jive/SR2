@@ -2694,7 +2694,7 @@ else {
 		$('#cat_place').show();
 		$('#selCat').show();
 		$('#cat_sel').show();
-		$('#catTo').show();
+		$('#catTo').hide();
 		$('#cat_select_items_button').show();
 		
 		}
