@@ -565,6 +565,7 @@ $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
 $("#cat_from_space").hide();
+$("#tag_from_group").hide();
 $("#selCat").hide();
 $("#cat_sel").hide();
 $("#catTo").hide();
