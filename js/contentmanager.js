@@ -937,7 +937,6 @@ else
 $("#cat_select_items_button").show();
 $('#catTo').css("margin-top", "225px");
 //$('#cat_sel').css("margin-left", "75px");
-$('#cat_sel').css("margin-left", "-70px");
 $("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
