@@ -2695,7 +2695,7 @@ else {
 		$('#selCat').show();
 		$('#cat_sel').show();
 		$('#catTo').show();
-		$('#catTo').text='Manage content for this category:';
+		$('#catTo').text('Manage content for this category:');
 		$('#cat_select_items_button').show();
 		$('#cat_place').css("margin-left", "250px");
 		$('#cat_sel').css("margin-left", "250px");
