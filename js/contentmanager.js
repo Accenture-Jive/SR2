@@ -923,7 +923,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
-$("#catTo").hide();
+$("#catTo").show();
 getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
@@ -1143,7 +1143,7 @@ $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Manage content for this category:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
-$("#catTo").show();
+$("#catTo").hide();
 $("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
