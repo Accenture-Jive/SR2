@@ -2687,7 +2687,7 @@ else {
 			});*/
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating categories has completed. Please click   <a href='' onclick='"+window.open('"+tempRedirectionUrl+"')>here </a>  to review the result.';
+		var str='Updating categories has completed. Please click   <a href='' oncliclwindow.open('+tempRedirectionUrl+')>here </a>  to review the result.';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		}
 		
