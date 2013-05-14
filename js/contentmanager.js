@@ -1141,9 +1141,9 @@ else if(sel_action_val=="categs")
 $('#cat_place').css("margin-top", "130px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
-$("#catTo").text("Categorize this:").append('<br/>');
+$("#catTo").text("Manage content for this category:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
-$("#catTo").hide();
+$("#catTo").show();
 $("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
@@ -2661,6 +2661,9 @@ else {
             for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
               console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
             }  
+			if(errorReferenceCatArray.length > 0 || errorDeReferenceCatArray.length>0) {
+				alert('Message:\\nYou have insufficient rights to update all the content selected.\\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\\nPlease contact your group or space admin to get the necessary rights.');
+			}
 
 	console.log("Category "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
