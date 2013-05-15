@@ -2441,6 +2441,8 @@ function filterCheckedUncheckCatgUrl(){
 	  uncheckItemArray = new Array();
 	  errorReferenceCatArray = new Array();
  errorDeReferenceCatArray = new Array();
+ referenceCatArrayIndex =0;
+ deReferenceCatArrayIndex =0;
 
 	              contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
                   contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
