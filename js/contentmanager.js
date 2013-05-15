@@ -3168,7 +3168,7 @@ else {
 		var str='Updating categories is completed. Please click   <a href="" onclick="javascript:window.open(\''+tempRedirectionUrl+'\,\'_blank\')">here </a>  for the new location of your content.';
 
 		console.log(str);
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Updatisng Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		
 }
