@@ -2628,6 +2628,8 @@ if(catIndex < checkedItemsArray.length) {
 				
 				//console.log("updated --"+JSON.stringify(catUpdateResponse));
 				if (catUpdateResponse.error){
+				console.log("updated --"+JSON.stringify(catUpdateResponse));
+				console.log("errorReferenceCatArray.length --"+errorReferenceCatArray.length);
         errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
         referenceCatArrayIndex++;
         
@@ -2697,7 +2699,16 @@ if(catIndex < uncheckItemArray.length) {
 				contentCatResponseObj.categories = updatedCategoryList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				//alert(JSON.stringify(catUpdateResponse));
-				console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+				//console.log("UPDated -- "+JSON.stringify(catUpdateResponse));
+				if (catUpdateResponse.error){
+				console.log("updated --"+JSON.stringify(catUpdateResponse));
+				console.log("errorReferenceCatArray.length --"+errorReferenceCatArray.length);
+				
+				errorDeReferenceCatArray[deReferenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
+				deReferenceCatArrayIndex++;
+        
+        }
+				
 				});
 				catIndex++;
 				removeCategoriesForContents();
