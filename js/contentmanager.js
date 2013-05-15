@@ -1742,6 +1742,8 @@ else if(sel_action_val=="categs")
 $('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
+$('#cat_place').css("margin-left", "-80px");
+$('#cat_sel').css("margin-left", "-80px");
 $("#catTo").text("Categorize this:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
 $("#catTo").hide();
