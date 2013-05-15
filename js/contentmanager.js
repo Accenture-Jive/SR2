@@ -1747,6 +1747,9 @@ document.getElementById("catTo").style.display="inline";
 $("#catTo").hide();
 $("#dwnTo").hide();
 $("#upTo").hide();
+$("#cat_sel option").each(function() {
+	$(this).remove();
+   });
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
 document.getElementById("cat_sel").style.display="inline";
