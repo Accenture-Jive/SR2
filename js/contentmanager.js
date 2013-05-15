@@ -3179,7 +3179,7 @@ else {
 function getFiles(space_url)
 {
 // fetches the files from the selected space/group/project using the SPACE_URL.
-alert("comming here..");
+
 osapi.jive.corev3.contents.get({
 type : 'file',
 fields : '@all',
