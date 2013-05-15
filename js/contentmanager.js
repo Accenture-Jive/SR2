@@ -2704,6 +2704,18 @@ else {
             }  
 			if(errorReferenceCatArray.length > 0 || errorDeReferenceCatArray.length>0) {
 				alert('Message:\nYou have insufficient rights to update all the content selected.\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\nPlease contact your group or space admin to get the necessary rights.');
+				$('#cmdu').hide();
+				$('#src_place').show();
+				$('#cat_place').show();
+				$('#selCat').show();
+				$('#cat_sel').show();
+				$('#catTo').show();
+				$('#catTo').text('Manage content for this category:');
+				$('#cat_select_items_button').show();
+				$('#cat_place').css("margin-left", "250px");
+				$('#cat_sel').css("margin-left", "250px");
+				$('#selected_items').css("margin-top", "135px");
+				$('#catTo').css("margin-top", "230px");
 			}
 			else {
 
