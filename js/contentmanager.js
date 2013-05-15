@@ -2432,6 +2432,8 @@ function filterCheckedUncheckCatgUrl(){
 	var contentTypeCheckBoxIdArray = new Array();
 	checkedItemsArray = new Array();
 	  uncheckItemArray = new Array();
+	  errorReferenceCatArray = new Array();
+ errorDeReferenceCatArray = new Array();
 
 	              contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
                   contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
@@ -2714,7 +2716,7 @@ else {
 				$('#cat_select_items_button').show();
 				$('#cat_place').css("margin-left", "250px");
 				$('#cat_sel').css("margin-left", "250px");
-				$('#selected_items').css("margin-top", "135px");
+				$('#selected_items').hide();
 				$('#catTo').css("margin-top", "230px");
 			}
 			else {
