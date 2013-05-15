@@ -1273,7 +1273,7 @@ document.getElementById("from_space").innerHTML=msg2;
 // calling the OSAPI with the params. final call.
 osapi.jive.corev3.places.requestPicker(params);	
 }
-
+alert("sdafsfddf");
 function fromGroupRequest() {
 // Handles user request to select the GROUP and then handle the response to fetch details about the selected GROUP.
 alert("From Group Request");
