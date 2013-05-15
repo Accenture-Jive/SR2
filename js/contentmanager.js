@@ -1280,6 +1280,7 @@ function fromGroupRequest() {
 var from_place_name='';
 src_space_name='';
 dest_space_name='';
+selected_cat = '';
 document.getElementById("to_place").disabled = false;
 document.getElementById("from_project").innerHTML=msg2;
 document.getElementById("from_group").innerHTML=msg2;
@@ -1458,6 +1459,9 @@ document.getElementById("catTo").style.display="inline";
 $("#catTo").hide();
 $("#dwnTo").hide();
 $("#upTo").hide();
+$("#cat_sel option").each(function() {
+	$(this).remove();
+   });
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
 document.getElementById("cat_sel").style.display="inline";
@@ -1762,7 +1766,9 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_project").innerHTML='<span id="myId" style="text-decoration:underline;">Project</span>'+': '+from_place_name;
-$("#cat_place").css("margin-top", "150px");
+$("#cat_from_project").css("width", "290px");
+$("#cat_from_project").css("margin-top", "145px");
+$("#cat_place").css("margin-top", "155px");
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
 $("#cat_from_project").show();
