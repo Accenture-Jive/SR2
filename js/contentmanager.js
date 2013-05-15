@@ -1276,7 +1276,7 @@ osapi.jive.corev3.places.requestPicker(params);
 
 function fromGroupRequest() {
 // Handles user request to select the GROUP and then handle the response to fetch details about the selected GROUP.
-alert("From Group Request");
+
 var from_place_name='';
 src_space_name='';
 dest_space_name='';
