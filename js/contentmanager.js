@@ -1203,6 +1203,7 @@ $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#tagTo").text("Assign tag to this content:").append('<br/>');
 document.getElementById("tagTo").style.display="inline";
+
 $("#tagTo").hide();
 $("#dwnTo").hide();
 $("#upTo").hide();
@@ -2593,7 +2594,7 @@ if(catIndex < checkedItemsArray.length) {
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
 					dotIndex++;
-				if(dotIndex == 4) dotIndex = 0;
+				if(dotIndex == 3) dotIndex = 0;
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
 				
@@ -2672,7 +2673,7 @@ if(catIndex < uncheckItemArray.length) {
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
 					dotIndex++;
-				if(dotIndex == 4) dotIndex = 0;
+				if(dotIndex == 3) dotIndex = 0;
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
@@ -3163,7 +3164,7 @@ else {
 			});*/
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
+		var str='Updating categories is completed. Please click   <a href="javascrip:window.open('+tempRedirectionUrl+')">here </a>  for the new location of your content.';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		
