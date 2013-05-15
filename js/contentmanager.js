@@ -1766,7 +1766,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_project").innerHTML='<span id="myId" style="text-decoration:underline;">Project</span>'+': '+from_place_name;
-$("#cat_from_project").css("width", "290px");
+$("#cat_from_project").css("width", "390px");
 $("#cat_from_project").css("margin-top", "145px");
 $("#cat_place").css("margin-top", "155px");
 $("#cat_from_space").hide();
