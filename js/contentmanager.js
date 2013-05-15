@@ -1480,8 +1480,9 @@ $("#cat_place").show();
 document.getElementById("cat_from_group").innerHTML='<span id="myId" style="text-decoration:underline;">Group</span>'+': '+from_place_name;
 $("#cat_place").css("margin-top", "150px");
 $("#cat_from_space").hide();
-$("#cat_from_group").show();
 $('#cat_from_group').css("margin-top", "145x");
+$("#cat_from_group").show();
+
 $('#cat_place').css("margin-top", "155px");
 $("#cat_from_project").hide();
 categoryTest();
