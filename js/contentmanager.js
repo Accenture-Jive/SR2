@@ -109,7 +109,7 @@ function selected_action()
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
 sel_action_val = sel_action.options[sel_action.selectedIndex].value;
-alert("sel_action_val = "+sel_action_val);
+
 var dialog_obj3 = $("#uploadIE");
 dialog_obj3.dialog("close");
 
@@ -2475,10 +2475,10 @@ function filterCheckedUncheckCatgUrl(){
                     });
                                 
                                 }
-                                alert("checkedItemsArray.length = "+checkedItemsArray.length);
+                               // alert("checkedItemsArray.length = "+checkedItemsArray.length);
                                 console.log("checkedItemsArray.length = "+checkedItemsArray.length);
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
-                                console.log("uncheckItemArray.length = "+uncheckItemArray.length);
+                              //  console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 		catIndex=0;
 		dotIndex=0;
 		updateCategoriesForNewContents1();		
