@@ -2343,7 +2343,6 @@ var uncheckedItemArrayUpdated = new Array();
 function filterCheckedUncheckCatgUrl(){
 	
      
-	  
 	  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
@@ -2429,7 +2428,10 @@ function filterCheckedUncheckCatgUrl(){
 		}
 		
 	function filterCheckedUncheckCatgUrl1(){
+	
 	var contentTypeCheckBoxIdArray = new Array();
+	checkedItemsArray = new Array();
+	  uncheckItemArray = new Array();
 
 	              contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
                   contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
