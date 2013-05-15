@@ -2478,9 +2478,9 @@ function filterCheckedUncheckCatgUrl(){
                     });
                                 
                                 }
-                               // alert("checkedItemsArray.length = "+checkedItemsArray.length);
+                                alert("checkedItemsArray.length = "+checkedItemsArray.length);
                                 console.log("checkedItemsArray.length = "+checkedItemsArray.length);
-                              //  alert("uncheckItemArray.length = "+uncheckItemArray.length);
+                                alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 		catIndex=0;
 		dotIndex=0;
