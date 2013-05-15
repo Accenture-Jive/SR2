@@ -1456,7 +1456,7 @@ $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $('#cat_place').css("margin-left", "-80px");
 $('#cat_sel').css("margin-left", "-80px");
-$("#catTo").text("Categorize this:").append('<br/>');
+$("#catTo").text("Manage content for this category:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
 $("#catTo").hide();
 $("#dwnTo").hide();
