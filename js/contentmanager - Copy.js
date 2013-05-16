@@ -3860,7 +3860,7 @@ $("#from_place").hide();
 $("#to_place").hide();
 $("#start_copying_button").hide();
 $("#change_contents").hide();
-$("#button_div").hide();
+$("#button_div").show();
 $("#copyTo").text("Moving this:");
 
 // send data to JS file movendelete for move.
