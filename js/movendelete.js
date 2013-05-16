@@ -390,9 +390,9 @@ alert('adsfsafdasf');
 var str='Deleting completed. You will now be redirected to "'+src_space_name+'".';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
-$("#stylized").fadeOut(5000,function(){
+/*$("#stylized").fadeOut(5000,function(){
 window.location = source_html_url+'/content';   
-});
+});*/
 }
 
 }
