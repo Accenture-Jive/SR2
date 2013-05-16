@@ -307,7 +307,7 @@ var postDisc;
 
 if(globalAction == 'move'){
 response.parent=global_blog_place_url;
-response.update().execute(updateResponse);
+//response.update().execute(updateResponse);
 }
 else if (globalAction == 'delete'){
 response.destroy().execute(updateResponse);
