@@ -1,3 +1,4 @@
+alert("hey hey hey");
 var globalAction='';
 var targetUrl='';
 var dest_space_name='';
