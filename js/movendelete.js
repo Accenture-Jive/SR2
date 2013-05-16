@@ -392,6 +392,8 @@ $("#cmdu").hide();
 $("#src_place").show();
 $("#del_place").show();
 $("#deleteTo").show();
+$("#del_select_items_button").show();
+$('#del_place').css("margin-left", "250px");
 var str='Deleting completed. You will now be redirected to "'+src_space_name+'".';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
