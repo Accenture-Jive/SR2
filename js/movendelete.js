@@ -370,7 +370,7 @@ $("#button_div").show();
 $('#selected_items').css("margin-top", "-105px");
 $("#select_items_button").show();
 var str='Moving completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
-document.getElementById("frame1").contentDocument.body.innerHTML = "Moving in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 }
 
 }
