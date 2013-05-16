@@ -391,6 +391,7 @@ alert('adsfsafdasf');
 $("#cmdu").hide();
 $("#src_place").show();
 $('#del_place').css("margin-left", "250px");
+$('#del_select_items_button').css("margin-left", "250px");
 $("#del_place").show();
 $("#deleteTo").show();
 $("#del_select_items_button").show();
