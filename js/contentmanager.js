@@ -4248,7 +4248,12 @@ Grp_poll_json='';
 $("#button_div").hide();
 document.getElementById("copyTo").style.visibility="visible";
 document.getElementById("start_copying_button").disabled = false;
+if(sel_action_val=="move"){
 $('#selected_items').css("margin-top", "-10px");
+}
+else if(sel_action_val=="delete"){
+$('#selected_items').css("margin-top", "70px");
+}
 
 $("#docs_div").hide();
 $("#files_div").hide();
