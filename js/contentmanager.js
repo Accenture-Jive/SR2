@@ -4248,6 +4248,7 @@ Grp_poll_json='';
 $("#button_div").hide();
 document.getElementById("copyTo").style.visibility="visible";
 document.getElementById("start_copying_button").disabled = false;
+$('#selected_items').css("margin-top", "-10px");
 
 $("#docs_div").hide();
 $("#files_div").hide();
