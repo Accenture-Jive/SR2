@@ -363,6 +363,9 @@ document.getElementById("ieSpan").innerHTML = 'The selected contents are being m
 }
 else
 {
+$("#from_place").show();
+$("#to_place").show();
+$("#select_items_button").show();
 var str='Moving completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Moving in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 }
