@@ -291,7 +291,7 @@ return;
 }
 if(globalAction == 'move'){
 response.parent=targetUrl;
-response.update().execute(updateResponse);
+//response.update().execute(updateResponse);
 }
 else if (globalAction == 'delete'){
 response.destroy().execute(updateResponse);
