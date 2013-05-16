@@ -274,7 +274,7 @@ document.getElementById("del_place").style.display="inline";
 document.getElementById("del_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 document.getElementById("up_place").style.display="inline";
-$("#del_place").css("margin-top", "110px");
+$("#del_place").css("margin-top", "170px");
 $("#del_select_items_button").hide();
 $("#up_select_items_button").hide();
 $("#copyTo").hide();
