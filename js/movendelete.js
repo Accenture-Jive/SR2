@@ -36,7 +36,6 @@ var blogSplitValue = Grp_blog_json.split(";");
 var ideaSplitValue = Grp_idea_json.split(";");
 var pollSplitValue = Grp_poll_json.split(";");
 
-
 noOfFile= 0;
 noOfFileExecuted=0;
 noOfFileFailed = 0;
