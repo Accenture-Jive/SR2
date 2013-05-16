@@ -366,7 +366,9 @@ else
 alert('adsfsafdasf');
 $("#from_place").show();
 $("#to_place").show();
+$("#cmdu").hide();
 $("#button_div").show();
+$("#src_place").show();
 $('#selected_items').css("margin-top", "-105px");
 $('#button_div').css("margin-top", "10px");
 $("#select_items_button").show();
