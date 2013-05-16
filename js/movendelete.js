@@ -363,6 +363,7 @@ document.getElementById("ieSpan").innerHTML = 'The selected contents are being m
 }
 else
 {
+alert('adsfsafdasf');
 $("#from_place").show();
 $("#to_place").show();
 $("#select_items_button").show();
