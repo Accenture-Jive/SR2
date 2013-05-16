@@ -1280,7 +1280,7 @@ osapi.jive.corev3.places.requestPicker(params);
 
 function fromGroupRequest() {
 // Handles user request to select the GROUP and then handle the response to fetch details about the selected GROUP.
-
+alert("commingsdsdfsdfsfd");
 var from_place_name='';
 src_space_name='';
 dest_space_name='';
@@ -1398,6 +1398,7 @@ $('#tag_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 
 // calling methods to fetch content from the selected group.
 getDocs(space_url);
+alert("space_url"+space_url);
 getFiles(space_url);
 getDiscussions(space_url);
 getIdeas(space_url);
