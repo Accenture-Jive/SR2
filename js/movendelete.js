@@ -385,8 +385,15 @@ document.getElementById("ieSpan").innerHTML = 'The selected contents have been d
 }
 else
 {
+alert('adsfsafdasf');
+$("#from_place").show();
+$("#to_place").show();
+$("#button_div").show();
+$('#selected_items').css("margin-top", "-105px");
+$('#button_div').css("margin-top", "10px");
+$("#select_items_button").show();
 var str='Deleting completed. You will now be redirected to "'+src_space_name+'".';
-document.getElementById("frame1").contentDocument.body.innerHTML = "Deleting in Progress.<br>Please leave this window open until the deleting process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
 $("#stylized").fadeOut(5000,function(){
 window.location = source_html_url+'/content';   
