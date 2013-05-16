@@ -4236,7 +4236,7 @@ else if(sel_action_val=="tags")
 		startUpdatingTags();
 }
 else {
-
+	alert("sdgdfg");
 all_selected='';
 Grp_file_json='';
 Grp_doc_json='';
