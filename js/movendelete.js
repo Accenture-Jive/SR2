@@ -1,4 +1,4 @@
-alert("hey hey hey");
+
 var globalAction='';
 var targetUrl='';
 var dest_space_name='';
@@ -147,7 +147,7 @@ document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progr
 alert("totalContentSelfUrlArray.length = "+totalContentSelfUrlArray.length);
 targetUrl = target_groupurl;
 movendeleteIndex = 0;
-
+alert("finalurl = "+finalurl);
 if(globalAction == 'move'){
 movenContents();
 }
