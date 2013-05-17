@@ -441,7 +441,7 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
-	}).execute(function(contentResponseObj){
+	}).execute(function(contentMoveResponseObj){
 				alert(JSON.stringify(contentMoveResponseObj));
 				console.log(JSON.stringify(contentMoveResponseObj));
 				
