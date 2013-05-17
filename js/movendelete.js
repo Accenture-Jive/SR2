@@ -249,7 +249,7 @@ document.getElementById("ieSpan").innerHTML = 'The selected contents are being m
 else
 {
 if(noOfFileExecuted == noOfFile) {
-alert('adsfsafdasf');
+
 $("#from_place").show();
 $("#to_place").show();
 $("#cmdu").hide();
@@ -336,7 +336,7 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 				contentMoveResponseObj.categories = updatedCategoryList;
 				contentMoveResponseObj.parent=targetUrl;
 				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
-				alert(JSON.stringify(contentUpdateResponse));
+				//alert(JSON.stringify(contentUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
 				if (contentUpdateResponse.error){
 				console.log("updated --"+JSON.stringify(contentUpdateResponse));
@@ -359,7 +359,7 @@ else {
             } 
 			if(errorArray.length > 0 ) {
 				alert('Message:\n\nYou have insufficient rights to update all the content selected.\n\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\n\nPlease contact your group or space admin to get the necessary rights.');
-				alert('adsfsafdasf');
+		
 				$("#from_place").show();
 				$("#to_place").show();
 				$("#cmdu").hide();
