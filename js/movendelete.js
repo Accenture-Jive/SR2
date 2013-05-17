@@ -443,12 +443,12 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 					//alert(contentMoveResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateCategories = contentMoveResponseObj.categories;
-				var str='Removing category '+selected_cat+' to '+contentMoveResponseObj.type+'';
+				var str='Moving '+contentMoveResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str = str +'.';
 					dotIndex++;
 				if(dotIndex == 4) dotIndex = 0;
-				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Moving in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
 				//toUpdateCategories = toUpdateCategories+','+selected_cat;
 				//toUpdateCategories = ["cat1","cat2","cat3"];
 				//toCategoriesArray = toUpdateCategories.split(",");
