@@ -8,6 +8,7 @@ var src_space_name='';
 var to_place_blog_url='';
 var global_blog_place_url='';
 var browserName='';
+var finalurl = '';
 
 var CONTENT_TYPE_DICUSSION = 'discussion';
 var CONTENT_TYPE_BLOG = 'post';
@@ -127,12 +128,12 @@ str2='Intializing Deleting';
 
 if(browserName=="MSIE" && globalAction == 'move')
 {
-var finalurl=redirection_url+'/content';
+ finalurl=redirection_url+'/content';
 document.getElementById("ieSpan").innerHTML = 'The selected contents are being moved. The moved contents will appear here in a short while: <a href='+finalurl+'>'+dest_space_name+' - Contents</a>';
 }
 else if(browserName=="MSIE" && globalAction == 'delete')
 {
-var finalurl=source_html_url+'/content';
+ finalurl=source_html_url+'/content';
 document.getElementById("ieSpan").innerHTML = 'The selected contents have been deleted. This can be verified here: <a href='+finalurl+'>'+src_space_name+' - Contents</a>';
 }
 else
