@@ -19,6 +19,7 @@ var CONTENT_TYPE_IDEA = 'idea';
 var noOfFile= 0;
 var noOfFileExecuted=0;
 var noOfFileFailed = 0;
+var movendeleteIndex = 0;
 
 function movendelete(action,srcgroup_place_url,target_groupurl,Grp_file_json,Grp_doc_json,Grp_disc_json,Grp_idea_json,Grp_poll_json,Grp_blog_json,dest_space_name1,redirection_url1,source_html_url1,src_space_name1,to_place_blog_url1,browserName1) {
 globalAction = action;
@@ -38,7 +39,7 @@ var pollSplitValue = Grp_poll_json.split(";");
 var totalContentSelfUrlArray = new Array();
 var errorArray = new Array();
 var errorIndex = 0;
-var movendeleteIndex = 0;
+
 
 noOfFile= 0;
 noOfFileExecuted=0;
@@ -139,6 +140,7 @@ document.getElementById("frame1").contentDocument.body.style.color='Grey';
 document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progress.<br>Please leave this window open until the "+str+"process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";	
 }
 alert("totalContentSelfUrlArray.length = "+totalContentSelfUrlArray.length);
+movendeleteIndex = 0;
 movenContents();
 /*if(discussionSplitValue.length > 1) {
 var str='';
