@@ -401,7 +401,7 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 	var toCategoriesArray;
 	var updatedCategoryList = new Array();
 	
-	//alert("contentURL got is ="+contentURL);
+	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
@@ -432,7 +432,7 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 				contentMoveResponseObj.categories = updatedCategoryList;
 				contentMoveResponseObj.parent=targetUrl;
 				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
-				//alert(JSON.stringify(contentUpdateResponse));
+				alert(JSON.stringify(contentUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
 				if (contentUpdateResponse.error){
 				console.log("updated --"+JSON.stringify(contentUpdateResponse));
@@ -466,7 +466,7 @@ else {
 			else {
 
 		console.log("contents  succesfully deleted");
-		//alert("contents  succesfully moved");
+		alert("contents  succesfully deleted");
 		console.log("contents  succesfully deleted");
 		$("#cmdu").hide();
 		$("#src_place").show();
