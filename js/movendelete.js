@@ -139,7 +139,7 @@ document.getElementById("frame1").contentDocument.body.style.color='Grey';
 document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progress.<br>Please leave this window open until the "+str+"process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";	
 }
 alert("totalContentSelfUrlArray.length = "+totalContentSelfUrlArray.length);
-//movenContents();
+movenContents();
 /*if(discussionSplitValue.length > 1) {
 var str='';
 var str2='';
@@ -431,17 +431,17 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 	var toCategoriesArray;
 	var updatedCategoryList = new Array();
 	
-	//alert("contentURL got is ="+contentURL);
+	alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentResponseObj){
-				//alert(JSON.stringify(contentMoveResponseObj));
+				alert(JSON.stringify(contentMoveResponseObj));
 				console.log(JSON.stringify(contentMoveResponseObj));
 				
-					//alert(contentMoveResponseObj.categories);
-					//alert("selected_cat = "+selected_cat);
+					alert(contentMoveResponseObj.categories);
+					
 				toUpdateCategories = contentMoveResponseObj.categories;
 				var str='Moving '+contentMoveResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
@@ -455,15 +455,15 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 				var tempIndex =0;
 				
 				
-				//toUpdateCategories = selected_cat;
+				
 				//alert("toUpdateCategories = "+toUpdateCategories);
 				console.log("toUpdateCategories = "+toUpdateCategories);
 				//contentMoveResponseObj.categories = toUpdateCategories;
 				contentMoveResponseObj.categories = updatedCategoryList;
 				contentMoveResponseObj.parent=targetUrl;
 				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
-				//alert(JSON.stringify(contentUpdateResponse));
-				//console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
+				alert(JSON.stringify(contentUpdateResponse));
+				console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
 				if (contentUpdateResponse.error){
 				console.log("updated --"+JSON.stringify(contentUpdateResponse));
 				console.log("errorArray.length --"+errorArray.length);
