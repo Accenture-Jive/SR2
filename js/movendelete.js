@@ -147,7 +147,14 @@ document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progr
 alert("totalContentSelfUrlArray.length = "+totalContentSelfUrlArray.length);
 targetUrl = target_groupurl;
 movendeleteIndex = 0;
+
+if(globalAction == 'move'){
 movenContents();
+}
+else {
+deleteContents()
+}
+
 
 }
 
@@ -296,8 +303,6 @@ window.location = source_html_url+'/content';
 }
 
 function movenContents() {
-	
-		
 if(movendeleteIndex < totalContentSelfUrlArray.length) {
 
 	var contentURL = totalContentSelfUrlArray[movendeleteIndex];
@@ -385,11 +390,96 @@ else {
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		}
-		
-		
+}
 }
 
+function deleteContents() {
+if(movendeleteIndex < totalContentSelfUrlArray.length) {
 
+	var contentURL = totalContentSelfUrlArray[movendeleteIndex];
+	var toUpdateCategories;
+	var toCategoriesArray;
+	var updatedCategoryList = new Array();
+	
+	//alert("contentURL got is ="+contentURL);
+	console.log("contentURL got is ="+contentURL);
+	osapi.jive.corev3.contents.get({
+	fields: '@all',	
+	uri: contentURL
+	}).execute(function(contentMoveResponseObj){
+				//alert(JSON.stringify(contentMoveResponseObj));
+				console.log(JSON.stringify(contentMoveResponseObj));
 
+				var str2='Deleting '+contentMoveResponseObj.type+'';
+				for(index =0;index < dotIndex;index++) 
+					str2 = str2 +'.';
+					dotIndex++;
+				if(dotIndex == 4) dotIndex = 0;
+				if(browserName=="MSIE")
+				{
+				
+				document.getElementById("ieSpan").innerHTML = 'The selected contents have been deleted. This can be verified here: <a href='+finalurl+'>'+src_space_name+' - Contents</a>';
+				}
+				else
+				{
+				document.getElementById("frame1").contentDocument.body.style.fontFamily="Tahoma";	
+				document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
+				document.getElementById("frame1").contentDocument.body.style.color='Grey';
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Deleting in Progress.<br>Please leave this window open until the deleting process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
+				}
+				
+			
+				contentMoveResponseObj.categories = updatedCategoryList;
+				contentMoveResponseObj.parent=targetUrl;
+				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
+				//alert(JSON.stringify(contentUpdateResponse));
+				console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
+				if (contentUpdateResponse.error){
+				console.log("updated --"+JSON.stringify(contentUpdateResponse));
+				console.log("errorArray.length --"+errorArray.length);
+				
+				errorArray[errorIndex] = contentMoveResponseObj.resources.html.ref;
+				errorIndex++;
+        
+        }
+				});
+				movendeleteIndex++;
+				movenContents();
+				
+			});
+
+}
+else {
+            for(var index = 0;index < errorArray.length;index++) {
+              console.log("Could not Move : "+errorArray[index]);
+            } 
+			if(errorArray.length > 0 ) {
+				alert('Message:\n\nYou have insufficient rights to update all the content selected.\n\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\n\nPlease contact your group or space admin to get the necessary rights.');
+				$("#cmdu").hide();
+				$("#src_place").show();
+				$('#del_place').css("margin-left", "250px");
+				$('#del_select_items_button').css("margin-left", "250px");
+				$("#del_place").show();
+				$("#deleteTo").show();
+				$("#del_select_items_button").show();
+			}
+			else {
+
+		console.log("contents  succesfully deleted");
+		//alert("contents  succesfully moved");
+		console.log("contents  succesfully deleted");
+		$("#cmdu").hide();
+		$("#src_place").show();
+		$('#del_place').css("margin-left", "250px");
+		$('#del_select_items_button').css("margin-left", "250px");
+		$("#del_place").show();
+		$("#deleteTo").show();
+		$("#del_select_items_button").show();
+
+		var str='Deleting completed. You will now be redirected to "'+src_space_name+'".';
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+		
+		}
+}
 }
 
