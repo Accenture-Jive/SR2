@@ -438,34 +438,23 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 	var toCategoriesArray;
 	var updatedCategoryList = new Array();
 	
-	alert("contentURL got is ="+contentURL);
+	//alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
 	}).execute(function(contentMoveResponseObj){
-				alert(JSON.stringify(contentMoveResponseObj));
+				//alert(JSON.stringify(contentMoveResponseObj));
 				console.log(JSON.stringify(contentMoveResponseObj));
-				
-					alert(contentMoveResponseObj.categories);
-					
-				toUpdateCategories = contentMoveResponseObj.categories;
+
 				var str2='Moving '+contentMoveResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str2 = str2 +'.';
 					dotIndex++;
 				if(dotIndex == 4) dotIndex = 0;
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Moving in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
-				//toUpdateCategories = toUpdateCategories+','+selected_cat;
-				//toUpdateCategories = ["cat1","cat2","cat3"];
-				//toCategoriesArray = toUpdateCategories.split(",");
-				var tempIndex =0;
 				
-				
-				
-				//alert("toUpdateCategories = "+toUpdateCategories);
-				console.log("toUpdateCategories = "+toUpdateCategories);
-				//contentMoveResponseObj.categories = toUpdateCategories;
+			
 				contentMoveResponseObj.categories = updatedCategoryList;
 				contentMoveResponseObj.parent=targetUrl;
 				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
@@ -479,7 +468,6 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 				errorIndex++;
         
         }
-				
 				});
 				movendeleteIndex++;
 				movenContents();
@@ -489,10 +477,8 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 }
 else {
             for(var index = 0;index < errorArray.length;index++) {
-              console.log("Could Not Reference "+errorArray[index]);
+              console.log("Could not Move : "+errorArray[index]);
             } 
-
-          
 			if(errorArray.length > 0 ) {
 				alert('Message:\n\nYou have insufficient rights to update all the content selected.\n\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\n\nPlease contact your group or space admin to get the necessary rights.');
 				alert('adsfsafdasf');
