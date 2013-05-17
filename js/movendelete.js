@@ -394,6 +394,7 @@ else {
 }
 
 function deleteContents() {
+alert("Method :"+deleteContents);
 if(movendeleteIndex < totalContentSelfUrlArray.length) {
 
 	var contentURL = totalContentSelfUrlArray[movendeleteIndex];
@@ -406,11 +407,11 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
-	}).execute(function(contentMoveResponseObj){
+	}).execute(function(contentDeleteResponseObj){
 				//alert(JSON.stringify(contentMoveResponseObj));
-				console.log(JSON.stringify(contentMoveResponseObj));
+				console.log(JSON.stringify(contentDeleteResponseObj));
 
-				var str2='Deleting '+contentMoveResponseObj.type+'';
+				var str2='Deleting '+contentDeleteResponseObj.type+'';
 				for(index =0;index < dotIndex;index++) 
 					str2 = str2 +'.';
 					dotIndex++;
@@ -429,9 +430,8 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 				}
 				
 			
-				contentMoveResponseObj.categories = updatedCategoryList;
-				contentMoveResponseObj.parent=targetUrl;
-				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
+		
+				contentDeleteResponseObj.destroy().execute(function(contentUpdateResponse){
 				alert(JSON.stringify(contentUpdateResponse));
 				console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
 				if (contentUpdateResponse.error){
