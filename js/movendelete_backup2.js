@@ -35,10 +35,6 @@ var documetSplitValue = Grp_doc_json.split(";");
 var blogSplitValue = Grp_blog_json.split(";");
 var ideaSplitValue = Grp_idea_json.split(";");
 var pollSplitValue = Grp_poll_json.split(";");
-var totalContentSelfUrlArray = new Array();
-var errorArray = new Array();
-var errorIndex = 0;
-var movendeleteIndex = 0;
 
 noOfFile= 0;
 noOfFileExecuted=0;
@@ -47,37 +43,31 @@ noOfFileFailed = 0;
 //For calculating the number of files.
 for (var i = 0; i <discussionSplitValue.length; i++) {
 if(discussionSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = discussionSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
 for (var i = 0; i <fileSplitValue.length; i++) {
 if(fileSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = fileSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
 for (var i = 0; i <documetSplitValue.length; i++) {
 if(documetSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = documetSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
 for (var i = 0; i <pollSplitValue.length; i++) {
 if(pollSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = pollSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
 for (var i = 0; i <ideaSplitValue.length; i++) {
 if(ideaSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = ideaSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
 for (var i = 0; i <blogSplitValue.length; i++) {
 if(blogSplitValue[i] != ''){
-totalContentSelfUrlArray[noOfFile] = blogSplitValue[i];
 noOfFile = noOfFile + 1;
 }
 }
@@ -139,8 +129,7 @@ document.getElementById("frame1").contentDocument.body.style.color='Grey';
 document.getElementById("frame1").contentDocument.body.innerHTML = str+"in Progress.<br>Please leave this window open until the "+str+"process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";	
 }
 
-movenContents();
-/*if(discussionSplitValue.length > 1) {
+if(discussionSplitValue.length > 1) {
 var str='';
 var str2='';
 targetUrl = target_groupurl;
@@ -157,12 +146,12 @@ str2='Deleting discussions';
 for (var i = 0; i <discussionSplitValue.length; i++) {
 templateSpace = discussionSplitValue[i];
 if(discussionSplitValue[i] != ''){
-//getContent(discussionSplitValue[i],target_groupurl,CONTENT_TYPE_DICUSSION);
+getContent(discussionSplitValue[i],target_groupurl,CONTENT_TYPE_DICUSSION);
 }
 }
-}*/
+}
 
-/*if(fileSplitValue.length > 1) {
+if(fileSplitValue.length > 1) {
 var str='';
 var str2='';
 targetUrl = target_groupurl;
@@ -182,9 +171,9 @@ if(fileSplitValue[i] != ''){
 getContent(fileSplitValue[i],target_groupurl,CONTENT_TYPE_FILES);
 }
 }
-}*/
+}
 
-/*if(documetSplitValue.length > 1) {
+if(documetSplitValue.length > 1) {
 var str='';
 var str2='';
 targetUrl = target_groupurl;
@@ -205,9 +194,9 @@ if(documetSplitValue[i] != ''){
 getContent(documetSplitValue[i],target_groupurl,CONTENT_TYPE_DOCUMENT);
 }
 }
-}*/
+}
 
-/*if(pollSplitValue.length > 1) {
+if(pollSplitValue.length > 1) {
 var str='';
 var str2='';
 targetUrl = target_groupurl;
@@ -228,9 +217,9 @@ if(pollSplitValue[i] != ''){
 getContent(pollSplitValue[i],target_groupurl,CONTENT_TYPE_POLLS);
 }
 }
-}*/
+}
 
-/*if(ideaSplitValue.length > 1) {
+if(ideaSplitValue.length > 1) {
 var str='';
 var str2='';
 targetUrl = target_groupurl;
@@ -251,9 +240,9 @@ if(ideaSplitValue[i] != ''){
 getContent(ideaSplitValue[i],target_groupurl,CONTENT_TYPE_IDEA);
 }
 }
-}*/
+}
 
-/*if(blogSplitValue.length > 1) {
+if(blogSplitValue.length > 1) {
 var str='';
 var str2='';
 global_blog_place_url=to_place_blog_url1;
@@ -274,7 +263,7 @@ if(blogSplitValue[i] != ''){
 getContent(blogSplitValue[i],to_place_blog_url1,CONTENT_TYPE_BLOG);
 }
 }
-}*/
+}
 }
 
 function getContent(source,target_groupurl,contentType) {
@@ -420,110 +409,3 @@ window.location = source_html_url+'/content';
 }
 //} 
 }
-
-function movenContents() {
-	
-		
-if(movendeleteIndex < totalContentSelfUrlArray.length) {
-
-	var contentURL = totalContentSelfUrlArray[movendeleteIndex];
-	var toUpdateCategories;
-	var toCategoriesArray;
-	var updatedCategoryList = new Array();
-	
-	//alert("contentURL got is ="+contentURL);
-	console.log("contentURL got is ="+contentURL);
-	osapi.jive.corev3.contents.get({
-	fields: '@all',	
-	uri: contentURL
-	}).execute(function(contentResponseObj){
-				//alert(JSON.stringify(contentMoveResponseObj));
-				console.log(JSON.stringify(contentMoveResponseObj));
-				
-					//alert(contentMoveResponseObj.categories);
-					//alert("selected_cat = "+selected_cat);
-				toUpdateCategories = contentMoveResponseObj.categories;
-				var str='Removing category '+selected_cat+' to '+contentMoveResponseObj.type+'';
-				for(index =0;index < dotIndex;index++) 
-					str = str +'.';
-					dotIndex++;
-				if(dotIndex == 4) dotIndex = 0;
-				document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-				//toUpdateCategories = toUpdateCategories+','+selected_cat;
-				//toUpdateCategories = ["cat1","cat2","cat3"];
-				//toCategoriesArray = toUpdateCategories.split(",");
-				var tempIndex =0;
-				
-				
-				//toUpdateCategories = selected_cat;
-				//alert("toUpdateCategories = "+toUpdateCategories);
-				console.log("toUpdateCategories = "+toUpdateCategories);
-				//contentMoveResponseObj.categories = toUpdateCategories;
-				contentMoveResponseObj.categories = updatedCategoryList;
-				contentMoveResponseObj.parent=targetUrl;
-				contentMoveResponseObj.update().execute(function(contentUpdateResponse){
-				//alert(JSON.stringify(contentUpdateResponse));
-				//console.log("UPDated -- "+JSON.stringify(contentUpdateResponse));
-				if (contentUpdateResponse.error){
-				console.log("updated --"+JSON.stringify(contentUpdateResponse));
-				console.log("errorArray.length --"+errorArray.length);
-				
-				errorArray[errorIndex] = contentMoveResponseObj.resources.html.ref;
-				errorIndex++;
-        
-        }
-				
-				});
-				movendeleteIndex++;
-				movenContents();
-				
-			});
-
-}
-else {
-            for(var index = 0;index < errorArray.length;index++) {
-              console.log("Could Not Reference "+errorArray[index]);
-            } 
-
-          
-			if(errorArray.length > 0 ) {
-				alert('Message:\n\nYou have insufficient rights to update all the content selected.\n\nYou need to have group administration or space moderation rights to update content with restricted authorship (e.g. discussions started by other users).\n\nPlease contact your group or space admin to get the necessary rights.');
-				alert('adsfsafdasf');
-				$("#from_place").show();
-				$("#to_place").show();
-				$("#cmdu").hide();
-				$("#button_div").show();
-				$("#src_place").show();
-				$('#selected_items').css("margin-top", "-105px");
-				$('#button_div').css("margin-top", "10px");
-				$("#select_items_button").show();
-			}
-			else {
-
-		console.log("Category "+selected_cat+" succesfully updated");
-		//alert("Category "+selected_cat+" succesfully updated");
-		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
-		
-		console.log("temRedirectionUrl = "+tempRedirectionUrl);
-	
-		alert('adsfsafdasf');
-		$("#from_place").show();
-		$("#to_place").show();
-		$("#cmdu").hide();
-		$("#button_div").show();
-		$("#src_place").show();
-		$('#selected_items').css("margin-top", "-105px");
-		$('#button_div').css("margin-top", "10px");
-		$("#select_items_button").show();
-		var str='Moving completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-		
-		}
-		
-		
-}
-
-
-
-}
-
