@@ -20,6 +20,9 @@ var noOfFile= 0;
 var noOfFileExecuted=0;
 var noOfFileFailed = 0;
 var movendeleteIndex = 0;
+var totalContentSelfUrlArray = new Array();
+var errorArray = new Array();
+var errorIndex = 0;
 
 function movendelete(action,srcgroup_place_url,target_groupurl,Grp_file_json,Grp_doc_json,Grp_disc_json,Grp_idea_json,Grp_poll_json,Grp_blog_json,dest_space_name1,redirection_url1,source_html_url1,src_space_name1,to_place_blog_url1,browserName1) {
 globalAction = action;
@@ -36,10 +39,10 @@ var documetSplitValue = Grp_doc_json.split(";");
 var blogSplitValue = Grp_blog_json.split(";");
 var ideaSplitValue = Grp_idea_json.split(";");
 var pollSplitValue = Grp_poll_json.split(";");
-var totalContentSelfUrlArray = new Array();
-var errorArray = new Array();
-var errorIndex = 0;
 
+totalContentSelfUrlArray = new Array();
+errorArray = new Array();
+errorIndex = 0;
 
 noOfFile= 0;
 noOfFileExecuted=0;
