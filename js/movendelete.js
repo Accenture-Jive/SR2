@@ -509,9 +509,7 @@ else {
 
 		console.log("Category "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
-		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
 		
-		console.log("temRedirectionUrl = "+tempRedirectionUrl);
 	
 		alert('adsfsafdasf');
 		$("#from_place").show();
