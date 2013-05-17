@@ -33,6 +33,7 @@ redirection_url=redirection_url1;
 source_html_url=source_html_url1;
 src_space_name=src_space_name1;
 browserName=browserName1;
+alert("redirection_url = "+redirection_url);
 finalurl=redirection_url+'/content';
 
 var	discussionSplitValue = Grp_disc_json.split(";");
@@ -149,10 +150,10 @@ targetUrl = target_groupurl;
 movendeleteIndex = 0;
 alert("finalurl = "+finalurl);
 if(globalAction == 'move'){
-movenContents();
+//movenContents();
 }
 else {
-deleteContents()
+//deleteContents()
 }
 
 
