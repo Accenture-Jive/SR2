@@ -476,7 +476,7 @@ else {
 		$("#deleteTo").show();
 		$("#del_select_items_button").show();
 
-		var str='Deleting completed. Please verify the  "'+src_space_name+'" - content.';
+		var str='Deleting completed. This can be verified here: <a href='+finalurl+'>'+src_space_name+' - Contents</a>';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		}
