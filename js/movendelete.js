@@ -33,6 +33,7 @@ redirection_url=redirection_url1;
 source_html_url=source_html_url1;
 src_space_name=src_space_name1;
 browserName=browserName1;
+finalurl=redirection_url+'/content';
 
 var	discussionSplitValue = Grp_disc_json.split(";");
 var fileSplitValue = Grp_file_json.split(";");			
@@ -147,141 +148,7 @@ alert("totalContentSelfUrlArray.length = "+totalContentSelfUrlArray.length);
 targetUrl = target_groupurl;
 movendeleteIndex = 0;
 movenContents();
-/*if(discussionSplitValue.length > 1) {
-var str='';
-var str2='';
-targetUrl = target_groupurl;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving discussions';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting discussions';
-}
-for (var i = 0; i <discussionSplitValue.length; i++) {
-templateSpace = discussionSplitValue[i];
-if(discussionSplitValue[i] != ''){
-//getContent(discussionSplitValue[i],target_groupurl,CONTENT_TYPE_DICUSSION);
-}
-}
-}*/
 
-/*if(fileSplitValue.length > 1) {
-var str='';
-var str2='';
-targetUrl = target_groupurl;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving files';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting files';
-}
-for (var i = 0; i <fileSplitValue.length; i++) {
-templateSpace = fileSplitValue[i];
-if(fileSplitValue[i] != ''){
-getContent(fileSplitValue[i],target_groupurl,CONTENT_TYPE_FILES);
-}
-}
-}*/
-
-/*if(documetSplitValue.length > 1) {
-var str='';
-var str2='';
-targetUrl = target_groupurl;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving documents';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting documents';
-}
-
-for (var i = 0; i <documetSplitValue.length; i++) {
-templateSpace = documetSplitValue[i];
-if(documetSplitValue[i] != ''){
-getContent(documetSplitValue[i],target_groupurl,CONTENT_TYPE_DOCUMENT);
-}
-}
-}*/
-
-/*if(pollSplitValue.length > 1) {
-var str='';
-var str2='';
-targetUrl = target_groupurl;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving polls';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting polls';
-}
-
-for (var i = 0; i <pollSplitValue.length; i++) {
-templateSpace = pollSplitValue[i];
-if(pollSplitValue[i] != ''){
-getContent(pollSplitValue[i],target_groupurl,CONTENT_TYPE_POLLS);
-}
-}
-}*/
-
-/*if(ideaSplitValue.length > 1) {
-var str='';
-var str2='';
-targetUrl = target_groupurl;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving ideas';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting ideas';
-}
-
-for (var i = 0; i <ideaSplitValue.length; i++) {
-templateSpace = ideaSplitValue[i];
-if(ideaSplitValue[i] != ''){
-getContent(ideaSplitValue[i],target_groupurl,CONTENT_TYPE_IDEA);
-}
-}
-}*/
-
-/*if(blogSplitValue.length > 1) {
-var str='';
-var str2='';
-global_blog_place_url=to_place_blog_url1;
-if(globalAction == 'move')
-{
-str='Moving ';
-str2='Moving blogs';
-}
-if(globalAction == 'delete')
-{
-str='Deleting ';
-str2='Deleting blogs';
-}
-
-for (var i = 0; i <blogSplitValue.length; i++) {
-templateSpace = blogSplitValue[i];
-if(blogSplitValue[i] != ''){
-getContent(blogSplitValue[i],to_place_blog_url1,CONTENT_TYPE_BLOG);
-}
-}
-}*/
 }
 
 function getContent(source,target_groupurl,contentType) {
@@ -452,7 +319,18 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
 					str2 = str2 +'.';
 					dotIndex++;
 				if(dotIndex == 4) dotIndex = 0;
+				if(browserName=="MSIE")
+				{
+				
+				document.getElementById("ieSpan").innerHTML = 'The selected contents are being moved. The moved contents will appear here in a short while: <a href='+finalurl+'>'+dest_space_name+' - Contents</a>';
+				}
+				else
+				{
+				document.getElementById("frame1").contentDocument.body.style.fontFamily="Tahoma";	
+				document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
+				document.getElementById("frame1").contentDocument.body.style.color='Grey';
 				document.getElementById("frame1").contentDocument.body.innerHTML = "Moving in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str2.fontcolor("#3778C7")+"</span>";
+				}
 				
 			
 				contentMoveResponseObj.categories = updatedCategoryList;
