@@ -444,7 +444,7 @@ if(movendeleteIndex < totalContentSelfUrlArray.length) {
         }
 				});
 				movendeleteIndex++;
-				movenContents();
+				deleteContents();
 				
 			});
 
@@ -476,7 +476,7 @@ else {
 		$("#deleteTo").show();
 		$("#del_select_items_button").show();
 
-		var str='Deleting completed. You will now be redirected to "'+src_space_name+'".';
+		var str='Deleting completed. Please verify the  "'+src_space_name+'" - content.';
 		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		}
